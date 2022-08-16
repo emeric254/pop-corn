@@ -1,7 +1,8 @@
 # pop-corn
 
-Mini application guide pour l'evenement [POPCON](https://www.popcon.show/).
+_Le nom de ce projet est un jeux de mot nul._
 
+Mini application qui sert de guide interactif pour l'evenement [POPCON](https://www.popcon.show/).
 
 ## Carte
 
