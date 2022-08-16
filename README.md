@@ -17,6 +17,9 @@ Il affiche les details des differentes activites: son nom, son horaire, sa ou se
 
 - [Vue.js](https://vuejs.org)
 - [vue-svg-map](https://github.com/VictorCazanave/vue-svg-map)
+- 
+- [FastAPI](https://fastapi.tiangolo.com/)
+- 
 
 
 --------
