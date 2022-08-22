@@ -19,15 +19,15 @@ class Logs(BaseModel):
 
 class CORS(BaseModel):
     autoriser: bool = True
-    origines: list[AnyHttpUrl | Literal['*']] = [
+    origines: Json[list[AnyHttpUrl | Literal['*']]] = [
         'https://mobile.popcon.com',  # prod
         'http://localhost:8080',  # popcon-compagnon en local
         'http://localhost:8088',  # popcon-organisation en local
     ]
     identifiants: bool = True
-    methodes: list[str] = ['*', ]
-    entetes: list[str] = ['*', ]
-    exposer_entetes: list[str] = ['*', ]
+    methodes: Json[list[str]] = ['*', ]
+    entetes: Json[list[str]] = ['*', ]
+    exposer_entetes: Json[list[str]] = ['*', ]
 
 
 class JWT(BaseModel):
