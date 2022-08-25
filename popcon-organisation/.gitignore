@@ -141,3 +141,6 @@ configuration.env
 # dist
 *.img
 *.tar.xz
+
+#
+donnees/

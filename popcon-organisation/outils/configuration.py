@@ -45,6 +45,7 @@ class Identifiants(BaseModel):
 
 class Configuration(BaseSettings):
     uri: str = ''
+    chemin_dossier_donnees: FilePath = './donnees/'
     logs = Logs()
     cors = CORS()
     jwt = JWT()

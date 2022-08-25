@@ -54,6 +54,12 @@ openssl genpkey -algorithm ED448 -out jwt.key
 openssl pkey -in jwt.key -pubout -out jwt.key.pub
 ```
 
+### Output folder
+
+This server will read and write files from a folder.
+Those files are also read by the `popcon-compagnon` project.
+The folder is symlinked `popcon-compagnon/public/donnees/` reference the folder `donnees/` from here.
+
 
 ## Start the server
 
