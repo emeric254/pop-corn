@@ -59,6 +59,7 @@ export default {
 }
 
 .mapsvg path {
+  cursor: pointer;
   fill: transparent;
   stroke: none;
   transition: fill 0.2s ease;
