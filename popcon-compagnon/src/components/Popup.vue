@@ -22,6 +22,12 @@ import { mapStores } from 'pinia';
 import { usePopupStore } from '@/stores/popup';
 
 export default {
+  data () {
+    return {
+      showContent: false,
+    }
+  },
+
   computed: {
     ...mapStores(usePopupStore)
   },
