@@ -16,6 +16,9 @@ with open(configuration.jwt.chemin_clef_publique, mode='r') as fichier:
     CLEF_PUBLIQUE = fichier.read()
 
 
+NOM_SERVEUR = 'popcon-organisation'
+
+
 def nouveau_jeton(user_id: Id) -> str:
     """
     Creer un nouveau jeton d'authentification pour un utilisateur.
@@ -32,8 +35,8 @@ def nouveau_jeton(user_id: Id) -> str:
             'nbf': now,  # not before time
             'exp': expiration,  # expiration time
             'sub': f'user:{user_id}',  # subject
-            'iss': 'popcon-organisation',  # issuer
-            'aud': ['popcon-organisation', ],  # audience
+            'iss': NOM_SERVEUR,  # issuer
+            'aud': [NOM_SERVEUR, ],  # audience
         },
         key=CLEF_PRIVEE,
         algorithm=configuration.jwt.algorithme
@@ -55,8 +58,8 @@ def verification(jeton: str) -> dict:
         algorithms=[configuration.jwt.algorithme],
         # claims validation
         leeway=datetime.timedelta(seconds=configuration.jwt.marge_expiration),
-        issuer='popcon-organisation',
-        audience='popcon-organisation',
+        issuer=NOM_SERVEUR,
+        audience=NOM_SERVEUR,
         options={
             'require': ['iat', 'nbf', 'exp', 'sub', 'iss', 'aud', ],
             'verify_iat': True,

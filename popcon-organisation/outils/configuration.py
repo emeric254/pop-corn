@@ -2,8 +2,7 @@
 
 from typing import Literal
 
-from pydantic import BaseSettings, BaseModel, Field, EmailStr, SecretStr, Json
-from pydantic import FilePath, AnyHttpUrl
+from pydantic import BaseSettings, BaseModel, Field, EmailStr, SecretStr, Json, FilePath, DirectoryPath, AnyHttpUrl
 from functools import lru_cache
 
 
@@ -45,7 +44,7 @@ class Identifiants(BaseModel):
 
 class Configuration(BaseSettings):
     uri: str = ''
-    chemin_dossier_donnees: FilePath = './donnees/'
+    chemin_dossier_donnees: DirectoryPath = './donnees/'
     logs = Logs()
     cors = CORS()
     jwt = JWT()

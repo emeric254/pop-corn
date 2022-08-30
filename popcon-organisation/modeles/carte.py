@@ -15,6 +15,4 @@ class Carte(BaseModel):
     """
     La carte
     """
-    # Dictionaire [ identifiant -> Zone ]
-    #   cf. https://stackoverflow.com/questions/60089947/creating-pydantic-model-schema-with-dynamic-key
-    __root__: dict[str, Zone]
+    zones: dict[str, Zone] = {}

@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
-from api.routers import jeton
+from api.routers import carte, jeton, planning
 
 from outils import obtenir_configuration
 
@@ -58,7 +58,9 @@ app = FastAPI(
 )
 
 # ajouter les routeurs
+app.include_router(carte.routeur)
 app.include_router(jeton.routeur)
+app.include_router(planning.routeur)
 
 # desactiver la redirection lorsque le '/' en fin d'URL est present ou non
 app.router.redirect_slashes = False

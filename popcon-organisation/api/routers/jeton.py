@@ -6,7 +6,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 
 from api.dependances import utilisateur_courant
 
-from logic import compte
+from logique import compte
 
 from modeles.base import Id
 from modeles.jeton import Jeton
@@ -38,7 +38,7 @@ async def login(*, formulaire: OAuth2PasswordRequestForm = Depends()):
             headers={'WWW-Authenticate': 'Bearer'},
         )
 
-    return Jeton(jeton=jwt.nouveau_jeton(user_id=0))
+    return Jeton(access_token=jwt.nouveau_jeton(user_id=0))
 
 
 @routeur.get(
@@ -51,4 +51,4 @@ async def login(*, formulaire: OAuth2PasswordRequestForm = Depends()):
 async def rafraichir_jeton(*, user_id: Id = Depends(utilisateur_courant)):
     # TODO limiter les rafraichissements ?
 
-    return Jeton(jeton=jwt.nouveau_jeton(user_id=user_id))
+    return Jeton(access_token=jwt.nouveau_jeton(user_id=user_id))
