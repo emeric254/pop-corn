@@ -40,14 +40,14 @@ async def nouvelle_zone(*, _: Id = Depends(utilisateur_courant), zone: Zone):
 
 
 @routeur.get(
-    '/zones/{nom_zone}',
+    '/zones/{id_zone}',
     response_model=Zone,
     responses={
         404: {'description': 'Zone inexistante'}
     },
 )
-async def obtenir_zone(*, _: Id = Depends(utilisateur_courant), nom_zone: str):
-    zone = carte.details_zone(nom_zone=nom_zone)
+async def obtenir_zone(*, _: Id = Depends(utilisateur_courant), id_zone: str):
+    zone = carte.details_zone(id_zone=id_zone)
 
     if not zone:
         raise HTTPException(status_code=404, detail='Cette zone n\'exsite pas')
@@ -56,30 +56,28 @@ async def obtenir_zone(*, _: Id = Depends(utilisateur_courant), nom_zone: str):
 
 
 @routeur.put(
-    '/zones/{nom_zone}',
+    '/zones/{id_zone}',
     response_model=Zone,
     responses={
         404: {'description': 'Zone inexistante'},
         422: {'description': 'Zone invalide'}
     },
 )
-async def modifier_zone(*, _: Id = Depends(utilisateur_courant), nom_zone: str, zone: Zone):
+async def modifier_zone(*, _: Id = Depends(utilisateur_courant), id_zone: str, zone: Zone):
     # on verifie si la zone existe pour emuler le comportement d'une vraie REST API
-    existe = carte.details_zone(nom_zone=nom_zone)
+    existe = carte.details_zone(id_zone=id_zone)
 
     if not existe:
         raise HTTPException(status_code=404, detail='Cette zone n\'exsite pas')
-
-    carte.supprimer_zone(nom_zone=nom_zone)
 
     carte.ajouter_zone(zone=zone)
 
     return zone
 
 
-@routeur.delete('/zones/{nom_zone}')
-async def supprimer_zone(*, _: Id = Depends(utilisateur_courant), nom_zone: str):
-    carte.supprimer_zone(nom_zone=nom_zone)
+@routeur.delete('/zones/{id_zone}')
+async def supprimer_zone(*, _: Id = Depends(utilisateur_courant), id_zone: str):
+    carte.supprimer_zone(id_zone=id_zone)
 
 
 # @routeur.post(

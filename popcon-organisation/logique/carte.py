@@ -38,19 +38,19 @@ def ajouter_zone(zone: Zone) -> Carte:
     """TODO
     """
     carte = lire()
-    carte.zones[zone.nom] = zone
+    carte.zones[zone.id] = zone
     sauvegarde(carte=carte)
     return carte
 
 
-def details_zone(nom_zone: str) -> Zone:
+def details_zone(id_zone: str) -> Zone:
     carte = lire()
-    return carte.zones.get(nom_zone)
+    return carte.zones.get(id_zone)
 
 
-def supprimer_zone(nom_zone: str) -> None:
+def supprimer_zone(id_zone: str) -> None:
     """TODO
     """
     carte = lire()
-    carte.zones.pop(nom_zone)
+    carte.zones.pop(id_zone)
     sauvegarde(carte=carte)

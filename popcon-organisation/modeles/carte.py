@@ -7,8 +7,9 @@ class Zone(BaseModel):
     """
     Une zone de la carte
     """
+    id: str
     nom: str
-    description: str
+    description: str = ''
 
 
 class Carte(BaseModel):
