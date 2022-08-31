@@ -1,8 +1,11 @@
 <template>
   <div>
+    <label for="input">Chercher:</label>
     <input
       v-model="query"
       type="search"
+      placeholder="Nom ou description…"
+      class="mx-2 px-1 border-2 border-solid border-slate-300 rounded-sm outline-slate-400 text-sm"
     >
     <table>
       <thead>
