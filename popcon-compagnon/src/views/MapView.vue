@@ -2,6 +2,12 @@
   <div class="flex justify-center">
     <div class="relative">
       <img src="@/assets/map.jpg" />
+      <div
+        v-if="isLoading"
+        class="flex justify-center items-center absolute top-0 left-0 w-full h-full"
+      >
+        Loading…
+      </div>
       <MapSvg
         class="absolute top-0 left-0 w-full h-full mapsvg"
         @mousedown="onMapClick"
@@ -23,6 +29,7 @@ export default {
   data () {
     return {
       mapData: {},
+      isLoading: true,
     }
   },
 
@@ -44,6 +51,7 @@ export default {
       const body = await fetch('/map.json');
       const data = await body.json();
       this.mapData = data;
+      this.isLoading = false;
     }
   },
 
