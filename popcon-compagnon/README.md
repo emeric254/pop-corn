@@ -33,3 +33,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Build a container ("docker") image for Production deployments
+
+```sh
+npm run podman
+```
