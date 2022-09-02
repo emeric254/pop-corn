@@ -19,7 +19,7 @@
       </thead>
       <tbody>
         <tr
-          v-for="(event, i) in filteredEvents"
+          v-for="(event, i) in displayedEvents"
           :key="i"
           class="even:bg-slate-100 odd:bg-slate-200"
         >
@@ -68,7 +68,7 @@ export default {
   computed: {
     filteredEvents () {
       const query = this.query.toLowerCase();
-      if (query.length < 3) {
+      if (query.length < 1) {
         return this.events;
       }
       return this.events.filter(eventObj => {
@@ -77,6 +77,15 @@ export default {
         const findInKeywords = eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
 
         return findInName || findInDesc || findInKeywords;
+      })
+    },
+
+    displayedEvents () {
+      return this.filteredEvents.sort((eventOne, eventTwo) => {
+        const dateOne = new Date(eventOne.debut).getTime();
+        const dateTwo = new Date(eventTwo.debut).getTime();
+
+        return dateOne - dateTwo;
       })
     }
   },
