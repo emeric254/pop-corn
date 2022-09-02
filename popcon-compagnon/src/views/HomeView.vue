@@ -1,9 +1,10 @@
 <script setup>
-import TheWelcome from "@/components/TheWelcome.vue";
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <router-link to="/map">Map</router-link>
+    <router-link to="/planning">Planning</router-link>
   </main>
 </template>

@@ -12,3 +12,5 @@ app.use(createPinia());
 app.use(router);
 
 app.mount("#app");
+
+document.title = "Pop Con " + (new Date()).getFullYear();
