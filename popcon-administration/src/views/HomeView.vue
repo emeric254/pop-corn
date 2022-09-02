@@ -1,7 +1,6 @@
 <template>
   <main class="flex flex-1 items-center justify-center">
-    <span v-if="loginStore.loggedIn">logged in</span>
-    <LoginForm v-else />
+    <LoginForm v-if="!loginStore.loggedIn" />
   </main>
 </template>
 

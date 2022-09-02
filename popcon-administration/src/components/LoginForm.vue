@@ -45,6 +45,7 @@ export default {
       this.loading = true;
       setTimeout(() => {
         this.loginStore.login();
+        this.$router.push({ path: '/dashboard' });
       }, 2000);
     }
   }
