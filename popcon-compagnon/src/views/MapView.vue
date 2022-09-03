@@ -39,8 +39,8 @@ export default {
 
   watch: {
     "$route.params.zone": {
-      handler () {
-        this.openZonePopup();
+      handler (_, oldZone) {
+        this.openZonePopup(oldZone);
       }
     }
   },
@@ -60,6 +60,10 @@ export default {
       }
     },
 
+    getZonePath (zoneName) {
+      return document.querySelector('path[inkscape\\:label="' + zoneName + '"]');
+    },
+
     async fetchData () {
       const body = await fetch('/map.json');
       const data = await body.json();
@@ -67,11 +71,25 @@ export default {
       this.isLoading = false;
     },
 
-    openZonePopup () {
+    /**
+     * 
+     * @param {String} oldZone The name of the zone that was previously selected.
+     */
+    openZonePopup (oldZone) {
       const zoneName = this.$route.params.zone;
+
+      // Zone previously selected, unselect it.
+      if (oldZone) {
+        this.getZonePath(oldZone).classList.remove("selected");
+      }
+
       if (zoneName) {
         const zoneData = this.mapData[zoneName];
-        this.popupStore.show(zoneData.nom, zoneData.description);
+
+        if (zoneData) {
+          this.getZonePath(zoneName).classList.add("selected");
+          this.popupStore.show(zoneData.nom, zoneData.description);
+        }
       }
     }
   },
@@ -101,5 +119,9 @@ export default {
 
 .mapsvg path:hover {
   fill: rgba(129, 236, 236, 0.5);
+}
+
+.mapsvg path.selected {
+  fill: rgba(255, 0, 0, 0.5);
 }
 </style>
