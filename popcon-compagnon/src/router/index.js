@@ -9,7 +9,7 @@ const router = createRouter({
       component: () => import("../views/HomeView.vue"),
     },
     {
-      path: "/map",
+      path: "/map/:zone?",
       name: "map",
       component: () => import("../views/MapView.vue"),
     },
