@@ -6,7 +6,7 @@
     >
       <div class="p-4 rounded-xl bg-white shadow-lg relative">
         <button
-          @click="popupStore.hide"
+          @click="hidePopup"
           title="Fermer"
           class="w-5 h-5 flex justify-center items-center border border-solid border-gray-900 rounded-full absolute top-3 right-3"
         >&times;</button>
@@ -27,9 +27,14 @@ export default {
   },
 
   methods: {
+    hidePopup () {
+      this.popupStore.hide();
+      this.$router.replace("/map");
+    },
+
     listenEscKey (event) {
       if (event.key === 'Escape') {
-        this.popupStore.hide();
+        this.hidePopup();
       }
     }
   },

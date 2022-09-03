@@ -37,13 +37,26 @@ export default {
     ...mapStores(usePopupStore)
   },
 
+  watch: {
+    "$route.params.zone": {
+      handler () {
+        this.openZonePopup();
+      }
+    }
+  },
+
   methods: {
     onMapClick (event) {
       const zone = event.target;
-      const label = zone.getAttribute('inkscape:label');
-      if (label !== null) {
-        const zoneData = this.mapData[label];
-        this.popupStore.show(zoneData.nom, zoneData.description);
+      const zoneName = zone.getAttribute('inkscape:label');
+
+      if (zoneName !== null) {
+        this.$router.push({
+          name: "map",
+          params: {
+            zone: zoneName,
+          }
+        })
       }
     },
 
@@ -52,11 +65,24 @@ export default {
       const data = await body.json();
       this.mapData = data;
       this.isLoading = false;
+    },
+
+    openZonePopup () {
+      const zoneName = this.$route.params.zone;
+      if (zoneName) {
+        const zoneData = this.mapData[zoneName];
+        this.popupStore.show(zoneData.nom, zoneData.description);
+      }
     }
   },
 
-  created () {
-    this.fetchData();
+  async created () {
+    await this.fetchData();
+    this.openZonePopup();
+  },
+
+  unmounted () {
+    this.popupStore.hide();
   }
 }
 </script>
