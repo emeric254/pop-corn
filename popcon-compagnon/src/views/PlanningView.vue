@@ -36,7 +36,11 @@
             {{ event.duree }}
           </td>
           <td class="p-2">
-            {{ event.zone }}
+            <RouterLink
+              :to="mapUrl(event)"
+              class="text-sky-500 underline hover:no-underline"
+              title="Cliquez pour voir où se déroule cet évènement."
+            >Voir sur la carte 📍</RouterLink>
           </td>
         </tr>
       </tbody>
@@ -45,7 +49,13 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
+  components: {
+    RouterLink,
+  },
+
   data () {
     return {
       query: "",
@@ -62,6 +72,15 @@ export default {
 
     displayDate (eventObj) {
       return new Date(eventObj.debut).toLocaleString();
+    },
+
+    mapUrl (event) {
+      return {
+        name: "map",
+        params: {
+          zone: event.zone,
+        }
+      }
     }
   },
 

@@ -8,7 +8,7 @@
     ],
     "debut": "2022-09-10T17:55:07+02:00",
     "duree": "PT1H10M",
-    "zone": "<id zone>"
+    "zone": "conference"
   },
   "2022-09-11T09:05:54+02:00": {
     "nom": "défilé de cosplayeurs",
@@ -19,7 +19,7 @@
     ],
     "debut": "2022-09-11T09:05:54+02:00",
     "duree": "PT15M",
-    "zone": "<id zone>"
+    "zone": "vestiaires_cosplay"
   },
   "2022-09-11T15:30:00+02:00": {
     "nom": "rencontre avec M. X",
@@ -30,7 +30,7 @@
     ],
     "debut": "2022-09-11T15:30:00+02:00",
     "duree": "PT30M",
-    "zone": "<id zone>"
+    "zone": "conference"
   },
   "2022-09-11T16:00:00+02:00": {
     "nom": "autographes avec M. X",
@@ -41,6 +41,6 @@
     ],
     "debut": "2022-09-11T16:00:00+02:00",
     "duree": "PT1H",
-    "zone": "<id zone>"
+    "zone": "conference"
   }
 }
