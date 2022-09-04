@@ -1,1 +1,144 @@
-{"zones": {"string": {"nom": "string", "description": "string"}, "test": {"nom": "test", "description": "string"}}}
+{
+	"zones": {
+		"0": {
+			"id": "0",
+			"nom": "COUCOUCIRCUS",
+			"description": " "
+		},
+		"1": {
+			"id": "1",
+			"nom": "D_COS_PARK / NITENR0C COSPLAY / LEOBANE COSPLAY",
+			"description": " "
+		},
+		"2": {
+			"id": "2",
+			"nom": "TEAM MOVIE MAKER",
+			"description": " "
+		},
+		"3": {
+			"id": "3",
+			"nom": "CARAMANGA",
+			"description": " "
+		},
+		"4": {
+			"id": "4",
+			"nom": "CHITRA",
+			"description": " "
+		},
+		"5": {
+			"id": "5",
+			"nom": "ACFF",
+			"description": " "
+		},
+		"6": {
+			"id": "6",
+			"nom": "FRWBY",
+			"description": " "
+		},
+		"7": {
+			"id": "7",
+			"nom": "JELLEXIA.H / YUUREI&KO",
+			"description": " "
+		},
+		"8": {
+			"id": "8",
+			"nom": "ECHOPPE DREMMWEL",
+			"description": " "
+		},
+		"9": {
+			"id": "9",
+			"nom": "TAUTAV ELIXIR",
+			"description": " "
+		},
+		"10": {
+			"id": "10",
+			"nom": "LA GARRONE EXPOSE",
+			"description": " "
+		},
+		"11": {
+			"id": "11",
+			"nom": "JESSE",
+			"description": " "
+		},
+		"12": {
+			"id": "12",
+			"nom": "OCCITANE COSPLAY",
+			"description": " "
+		},
+		"13": {
+			"id": "13",
+			"nom": "RUSH FEVER",
+			"description": " "
+		},
+		"14": {
+			"id": "14",
+			"nom": "HYDROMEL CROM !",
+			"description": " "
+		},
+		"15": {
+			"id": "15",
+			"nom": "HOBOS COSPLAY",
+			"description": " "
+		},
+		"16": {
+			"id": "16",
+			"nom": "MISUSHOP",
+			"description": " "
+		},
+		"17": {
+			"id": "17",
+			"nom": "WHAT KENDAMA",
+			"description": " "
+		},
+		"18": {
+			"id": "18",
+			"nom": "YOJERAI FIGHT SABER",
+			"description": " "
+		},
+		"19": {
+			"id": "19",
+			"nom": "CHAR WONDERLAND",
+			"description": " "
+		},
+		"20": {
+			"id": "20",
+			"nom": "LILYCORNART",
+			"description": " "
+		},
+		"21": {
+			"id": "21",
+			"nom": "UNE FILLE A TOKYO",
+			"description": " "
+		},
+		"65": {
+			"id": "65",
+			"nom": "UNIVERS DU BONBON",
+			"description": " "
+		},
+		"66": {
+			"id": "66",
+			"nom": "LA CHANCE QUI TOURNE",
+			"description": " "
+		},
+		"67": {
+			"id": "67",
+			"nom": "LES TRESORS DE BETOOIN",
+			"description": " "
+		},
+		"68": {
+			"id": "68",
+			"nom": "TOULOUSESCAPE: CODEX ATLANTICUS",
+			"description": " "
+		},
+		"69": {
+			"id": "69",
+			"nom": "TOULOUSESCAPE: BLACK CIRCUS",
+			"description": " "
+		},
+		"100": {
+			"id": "100",
+			"nom": "TOULOUSE QUIDDITCH",
+			"description": " "
+		}
+	}
+}
