@@ -1,0 +1,11 @@
+fastapi  # the REST API framework
+
+uvicorn[standard]  # the actual web server running the REST API
+
+pydantic[email, dotenv]  # used by fastapi
+
+pyjwt  # used by an helper for JWT
+
+cryptography  # used by pyjwt
+
+python-multipart  # used by the fastapi.security.OAuth2PasswordBearer endpoint
