@@ -15,6 +15,8 @@ COPY vite.config.js index.html  ./
 COPY public  ./public/
 COPY src  ./src/
 
+RUN rm ./public/donnees
+
 RUN npm run build
 
 
