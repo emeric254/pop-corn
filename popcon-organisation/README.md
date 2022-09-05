@@ -42,6 +42,8 @@ cp reference.env configuration.env
 $EDITOR configuration.env
 ```
 
+Do not forget to add credentials you want to use to connect to the server.
+
 ### Keys
 
 This server requires a pair of keys to be able to generate tokens.
@@ -58,7 +60,8 @@ openssl pkey -in jwt.key -pubout -out jwt.key.pub
 
 This server will read and write files from a folder.
 Those files are also read by the `popcon-compagnon` project.
-The folder is symlinked `popcon-compagnon/public/donnees/` reference the folder `donnees/` from here.
+
+Both symlinks `popcon-compagnon/public/donnees/` and `popcon-administration/public/donnees/` reference this folder.
 
 
 ## Start the server
@@ -74,12 +77,14 @@ It will ensure the `venv` exists, check the dependencies and start the server:
 bash lancer.sh
 ```
 
-Once it started you can find the server running over [http://127.0.0.1:8088/](http://127.0.0.1:8088/)
+Once it started you can find the server running over [http://localhost:8088/](http://localhost:8088/)
 
-The server also generate the associated OpenApi documentation at [http://127.0.0.1:8088/docs](http://127.0.0.1:8088/docs)
-(a ReDoc format is also available at [http://127.0.0.1:8088/redoc](http://127.0.0.1:8088/redoc))
+The server also generate the associated OpenApi documentation at
+[http://localhost:8088/docs](http://localhost:8088/docs)
+(a ReDoc format is also available at [http://localhost:8088/redoc](http://localhost:8088/redoc))
 
-The OpenApi JSON definition file is accessible using [http://127.0.0.1:8088/openapi.json](http://127.0.0.1:8088/openapi.json)
+The OpenApi JSON definition file is accessible using
+[http://localhost:8088/openapi.json](http://localhost:8088/openapi.json)
 
 
 ## Build the container image
