@@ -40,17 +40,20 @@ export default {
   methods: {
     onMapClick (event) {
       const zone = event.target;
-      const label = zone.getAttribute('inkscape:label');
+      const label = zone.getAttribute('id');
       if (label !== null) {
         const zoneData = this.mapData[label];
+        if (!zoneData) {
+          return;
+        }
         this.popupStore.show(zoneData.nom, zoneData.description);
       }
     },
 
     async fetchData () {
-      const body = await fetch('/map.json');
+      const body = await fetch('/donnees/carte.json');
       const data = await body.json();
-      this.mapData = data;
+      this.mapData = data.zones;
       this.isLoading = false;
     }
   },

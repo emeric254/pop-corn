@@ -1,1 +1,37 @@
-{"activites": {"test2": {"nom": "test2", "description": "string", "mots_clef": ["string"], "debut": "2022-08-30T20:49:21.660000+00:00", "duree": 12.0, "zone": "string"}, "test23": {"nom": "test23", "description": "string", "mots_clef": ["string"], "debut": "2022-08-30T20:49:21.660000+00:00", "duree": 12.0, "zone": "string"}, "string": {"nom": "string", "description": "", "mots_clef": [], "debut": "2022-08-30T21:12:27.799000+00:00", "duree": 0.0, "zone": ""}}}
+{
+	"activites": {
+		"concert de K-pop": {
+			"nom": "concert de K-pop",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "mots_clef": [
+            "K-pop",
+            "concert"
+            ],
+            "debut": "2022-09-10T17:55:07+02:00",
+            "duree": "PT1H10M",
+            "zone": "<id zone>"
+		},
+		"défilé de cosplayeurs": {
+			"nom": "défilé de cosplayeurs",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "mots_clef": [
+            "cosplay",
+            "VIP"
+            ],
+            "debut": "2022-09-11T09:05:54+02:00",
+            "duree": "PT15M",
+            "zone": "<id zone>"
+		},
+		"autographes avec M. X": {
+			"nom": "autographes avec M. X",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "mots_clef": [
+            "autographes",
+            "M. X"
+            ],
+            "debut": "2022-09-11T16:00:00+02:00",
+            "duree": "PT1H",
+            "zone": "<id zone>"
+		}
+	}
+}
