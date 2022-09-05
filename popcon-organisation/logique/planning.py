@@ -115,22 +115,47 @@ def importer(contenu: bytes) -> Planning:
 
             valeur = valeur.replace('\n', ' - ')
 
-            clef_activite = valeur + ' - ' + jour
+            clef_activite = valeur + ' - ' + horaire
             print(f'{clef_activite=}')
 
             print(f'{valeur=}')
 
-            if clef_activite in activites:
-                activites[clef_activite]['duree'] += 15  # les creneaux sont de 15 minutes
-            else:
-                activites[clef_activite] = {
-                    'nom': valeur,
-                    'debut': horaire,
-                    'duree': 15,
-                    'zone': zone,
-                }
+            activites[clef_activite] = {
+                'nom': valeur,
+                'debut': horaire,
+                'duree': 15,
+                'zone': zone,
+            }
 
     print(activites)
+
+    clefs = sorted(list(activites.keys()))
+
+    i = 0
+    while i < len(clefs):
+        clef = clefs[i]
+        nom, horaire = clef.split(' - ')
+
+        i += 1
+
+        if i == len(clefs):
+            # eviter de sortir de la liste
+            break
+
+        suivante = clefs[i + 1]
+        nom_suivante, horaire_suivante = suivante.split(' - ')
+
+        if nom != nom_suivante:
+            # activite differente
+            continue
+
+        if datetime.datetime.fromisoformat(horaire) + datetime.timedelta(minutes=15) \
+                == datetime.datetime.fromisoformat(suivante):
+            # la meme activite
+            # ajouter 15 min a sa duree
+            activites[clef]['duree'] += 15
+            # supprimer le duplicat
+            activites.pop(suivante)
 
     for clef in activites.keys():
         activite = activites[clef]
