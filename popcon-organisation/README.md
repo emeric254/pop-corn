@@ -93,3 +93,9 @@ The server container image can be build using this command:
 ```shell
 bash construire.sh
 ```
+
+The container can be start with this command
+You can replace the port and the various path (left parts) as you wish.
+```shell
+podman run --rm -p 8888:8088 -v ./donnees/:/app/donnees/ -v ./jwt.key:/app/jwt.key -v ./jwt.key.pub:/app/jwt.key.pub localhost/popcon-organisation:latest
+```
