@@ -72,13 +72,12 @@ export default {
     },
 
     /**
-     * 
+     * Opens the popup with the information from the parameters.
      * @param {String} oldZone The name of the zone that was previously selected.
      */
     openZonePopup (oldZone) {
       const zoneName = this.$route.params.zone;
 
-      // Zone previously selected, unselect it.
       if (oldZone) {
         this.getZonePath(oldZone).classList.remove("selected");
       }
