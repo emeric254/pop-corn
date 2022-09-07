@@ -18,56 +18,56 @@
 
 <script>
 import MapSvg from "@/assets/map.svg";
-import { mapStores } from 'pinia';
-import { usePopupStore } from '@/stores/popup';
+import { mapStores } from "pinia";
+import { usePopupStore } from "@/stores/popup";
 
 export default {
   components: {
-    MapSvg
+    MapSvg,
   },
 
-  data () {
+  data() {
     return {
       mapData: {},
       isLoading: true,
-    }
+    };
   },
 
   computed: {
-    ...mapStores(usePopupStore)
+    ...mapStores(usePopupStore),
   },
 
   watch: {
     "$route.params.zone": {
-      handler (_, oldZone) {
+      handler(_, oldZone) {
         this.openZonePopup(oldZone);
-      }
-    }
+      },
+    },
   },
 
   methods: {
-    onMapClick (event) {
+    onMapClick(event) {
       const zone = event.target;
-      const zoneName = zone.getAttribute('inkscape:label');
+      const zoneName = zone.getAttribute("id");
 
       if (zoneName !== null) {
         this.$router.push({
           name: "map",
           params: {
             zone: zoneName,
-          }
-        })
+          },
+        });
       }
     },
 
-    getZonePath (zoneName) {
-      return document.querySelector('path[inkscape\\:label="' + zoneName + '"]');
+    getZonePath(zoneName) {
+      return document.querySelector('path[id="' + zoneName + '"]');
     },
 
-    async fetchData () {
-      const body = await fetch('/map.json');
+    async fetchData() {
+      const body = await fetch("/donnees/carte.json");
       const data = await body.json();
-      this.mapData = data;
+      this.mapData = data.zones;
       this.isLoading = false;
     },
 
@@ -75,52 +75,70 @@ export default {
      * Opens the popup with the information from the parameters.
      * @param {String} oldZone The name of the zone that was previously selected.
      */
-    openZonePopup (oldZone) {
+    openZonePopup(oldZone) {
       const zoneName = this.$route.params.zone;
 
+      // Zone previously selected, unselect it.
       if (oldZone) {
-        this.getZonePath(oldZone).classList.remove("selected");
+        const zonePath = this.getZonePath(oldZone);
+        if (zonePath) {
+          zonePath.classList.remove("selected");
+        }
       }
 
       if (zoneName) {
         const zoneData = this.mapData[zoneName];
 
         if (zoneData) {
-          this.getZonePath(zoneName).classList.add("selected");
+          const zonePath = this.getZonePath(zoneName);
+          if (zonePath) {
+            zonePath.classList.add("selected");
+          }
           this.popupStore.show(zoneData.nom, zoneData.description);
         }
       }
-    }
+    },
   },
 
-  async created () {
+  async created() {
     await this.fetchData();
     this.openZonePopup();
   },
 
-  unmounted () {
+  unmounted() {
     this.popupStore.hide();
-  }
-}
+  },
+};
 </script>
 
-<style>
+<style scoped>
 .mapsvg {
   pointer-events: fill;
 }
 
-.mapsvg path {
+:deep() .mapsvg path {
   cursor: pointer;
   fill: transparent;
   stroke: none;
   transition: fill 0.2s ease;
 }
 
-.mapsvg path:hover {
-  fill: rgba(129, 236, 236, 0.5);
+:deep() .mapsvg path:hover {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: butt;
+
+  fill: rgba(129, 236, 236, 0.3);
+
+  filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
 }
 
-.mapsvg path.selected {
-  fill: rgba(255, 0, 0, 0.5);
+:deep() .mapsvg path.selected {
+  stroke: black;
+  stroke-width: 1px;
+
+  fill: rgba(0, 255, 55, 0.3);
+
+  filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
 }
 </style>

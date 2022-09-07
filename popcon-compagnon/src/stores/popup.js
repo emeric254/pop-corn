@@ -9,14 +9,14 @@ export const usePopupStore = defineStore({
   }),
 
   actions: {
-    show (newTitle, newBody) {
+    show(newTitle, newBody) {
       this.isVisible = true;
       this.title = newTitle;
       this.body = newBody;
     },
 
-    hide () {
+    hide() {
       this.isVisible = false;
-    }
+    },
   },
 });

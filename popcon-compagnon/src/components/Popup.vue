@@ -6,53 +6,59 @@
     >
       <div class="rounded-xl bg-white shadow-lg relative overflow-hidden">
         <div class="bg-sky-50 flex items-center justify-between p-3">
-          <h3 class="text-popcon-blue font-bold">{{ popupStore.title }}</h3>
+          <h3 class="text-popcon-blue font-bold pr-2">
+            {{ popupStore.title }}
+          </h3>
           <button
             @click="hidePopup"
             title="Fermer"
             class="w-5 h-5 pb-0.5 flex justify-center items-center border-2 border-solid border-popcon-orange rounded-full text-popcon-orange hover:text-popcon-green hover:border-popcon-green transition-colors duration-200"
-          >&times;</button>
+          >
+            &times;
+          </button>
         </div>
 
-        <p class="text-gray-700 p-3">{{ popupStore.body }}</p>
+        <p v-if="popupStore.body" class="text-gray-700 p-3">
+          {{ popupStore.body }}
+        </p>
       </div>
     </div>
   </Transition>
 </template>
 
 <script>
-import { mapStores } from 'pinia';
-import { usePopupStore } from '@/stores/popup';
+import { mapStores } from "pinia";
+import { usePopupStore } from "@/stores/popup";
 
 export default {
   computed: {
-    ...mapStores(usePopupStore)
+    ...mapStores(usePopupStore),
   },
 
   methods: {
-    hidePopup () {
+    hidePopup() {
       this.popupStore.hide();
       this.$router.replace("/map");
     },
 
-    listenEscKey (event) {
-      if (event.key === 'Escape') {
+    listenEscKey(event) {
+      if (event.key === "Escape") {
         this.hidePopup();
       }
-    }
+    },
   },
 
-  mounted () {
-    window.addEventListener('keydown', this.listenEscKey);
+  mounted() {
+    window.addEventListener("keydown", this.listenEscKey);
   },
 
-  destroyed () {
-    window.removeEventListener('keydown', this.listenEscKey);
-  }
-}
+  unmounted() {
+    window.removeEventListener("keydown", this.listenEscKey);
+  },
+};
 </script>
 
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
