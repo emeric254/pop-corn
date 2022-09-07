@@ -9,14 +9,6 @@
         placeholder="Nom ou description…"
         class="mx-2 px-3 py-1 border-2 border-solid border-popcon-blue rounded-lg outline-none text-popcon-blue focus:border-popcon-green"
       />
-      <button
-        v-if="query"
-        @click="query = ''"
-        type="button"
-        class="ml-2 px-3 py-1 uppercase font-bold text-white text-sm bg-popcon-orange rounded-lg"
-      >
-        Vider
-      </button>
       <label for="select">Choisir une date:</label>
       <select
         id="select"
@@ -29,12 +21,12 @@
         </option>
       </select>
       <button
-        v-if="selectedDate"
-        @click="selectedDate = ''"
+        v-if="selectedDate || query"
+        @click="selectedDate = query = ''"
         type="button"
         class="ml-2 px-3 py-1 uppercase font-bold text-white text-sm bg-popcon-orange rounded-lg"
       >
-        Vider
+        X
       </button>
     </div>
     <div class="mt-6 overflow-x-auto w-full relative">
