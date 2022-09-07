@@ -65,9 +65,9 @@ export default {
 
   methods: {
     async fetchPlanning () {
-      const request = await fetch('/planning.json');
+      const request = await fetch('/donnees/planning.json');
       const planning = await request.json();
-      this.events = Object.values(planning);
+      this.events = Object.values(planning.activites);
     },
 
     displayDate (eventObj) {

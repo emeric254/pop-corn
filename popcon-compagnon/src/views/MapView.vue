@@ -48,7 +48,7 @@ export default {
   methods: {
     onMapClick (event) {
       const zone = event.target;
-      const zoneName = zone.getAttribute('inkscape:label');
+      const zoneName = zone.getAttribute('id');
 
       if (zoneName !== null) {
         this.$router.push({
@@ -61,18 +61,18 @@ export default {
     },
 
     getZonePath (zoneName) {
-      return document.querySelector('path[inkscape\\:label="' + zoneName + '"]');
+      return document.querySelector('path[id="' + zoneName + '"]');
     },
 
     async fetchData () {
-      const body = await fetch('/map.json');
+      const body = await fetch('/donnees/carte.json');
       const data = await body.json();
-      this.mapData = data;
+      this.mapData = data.zones;
       this.isLoading = false;
     },
 
     /**
-     * 
+     *
      * @param {String} oldZone The name of the zone that was previously selected.
      */
     openZonePopup (oldZone) {
