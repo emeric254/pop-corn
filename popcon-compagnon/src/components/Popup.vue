@@ -9,7 +9,9 @@
           @click="hidePopup"
           title="Fermer"
           class="w-5 h-5 flex justify-center items-center border border-solid border-gray-900 rounded-full absolute top-3 right-3"
-        >&times;</button>
+        >
+          &times;
+        </button>
         <h3>{{ popupStore.title }}</h3>
         <p>{{ popupStore.body }}</p>
       </div>
@@ -18,38 +20,38 @@
 </template>
 
 <script>
-import { mapStores } from 'pinia';
-import { usePopupStore } from '@/stores/popup';
+import { mapStores } from "pinia";
+import { usePopupStore } from "@/stores/popup";
 
 export default {
   computed: {
-    ...mapStores(usePopupStore)
+    ...mapStores(usePopupStore),
   },
 
   methods: {
-    hidePopup () {
+    hidePopup() {
       this.popupStore.hide();
       this.$router.replace("/map");
     },
 
-    listenEscKey (event) {
-      if (event.key === 'Escape') {
+    listenEscKey(event) {
+      if (event.key === "Escape") {
         this.hidePopup();
       }
-    }
+    },
   },
 
-  mounted () {
-    window.addEventListener('keydown', this.listenEscKey);
+  mounted() {
+    window.addEventListener("keydown", this.listenEscKey);
   },
 
-  destroyed () {
-    window.removeEventListener('keydown', this.listenEscKey);
-  }
-}
+  unmounted() {
+    window.removeEventListener("keydown", this.listenEscKey);
+  },
+};
 </script>
 
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

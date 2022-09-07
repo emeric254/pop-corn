@@ -17,7 +17,7 @@ const router = createRouter({
       path: "/planning",
       name: "planning",
       component: () => import("../views/PlanningView.vue"),
-    }
+    },
   ],
 });
 

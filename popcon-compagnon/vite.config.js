@@ -1,12 +1,14 @@
 import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import svgLoader from "vite-svg-loader";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), svgLoader({ svgo: false })], /* disable "svgo" to avoid style stripping, cf. https://github.com/damianstasik/vue-svg-loader/issues/31 */
+  plugins: [
+    vue(),
+    svgLoader({ svgo: false }), // disable "svgo" to avoid style stripping, cf. https://github.com/damianstasik/vue-svg-loader/issues/31
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

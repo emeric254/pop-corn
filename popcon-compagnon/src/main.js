@@ -13,4 +13,4 @@ app.use(router);
 
 app.mount("#app");
 
-document.title = "Pop Con " + (new Date()).getFullYear();
+document.title = "PopCon " + new Date().getFullYear();

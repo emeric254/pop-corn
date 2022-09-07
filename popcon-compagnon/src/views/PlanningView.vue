@@ -6,7 +6,7 @@
       type="search"
       placeholder="Nom ou description…"
       class="mx-2 px-1 border-2 border-solid border-slate-300 rounded-sm outline-slate-400 text-sm"
-    >
+    />
     <table>
       <thead>
         <tr>
@@ -33,14 +33,16 @@
             {{ displayDate(event) }}
           </td>
           <td class="p-2">
-            {{ event.duree }}
+            {{ displayDuration(event) }}
           </td>
           <td class="p-2">
             <RouterLink
               :to="mapUrl(event)"
               class="text-sky-500 underline hover:no-underline"
               title="Cliquez pour voir où se déroule cet évènement."
-            >Voir sur la carte 📍</RouterLink>
+            >
+              Voir sur la carte 📍
+            </RouterLink>
           </td>
         </tr>
       </tbody>
@@ -49,68 +51,83 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
+import * as td from "tinyduration";
 
 export default {
   components: {
     RouterLink,
   },
 
-  data () {
+  data() {
     return {
       query: "",
       events: [],
-    }
+    };
   },
 
   methods: {
-    async fetchPlanning () {
-      const request = await fetch('/donnees/planning.json');
+    async fetchPlanning() {
+      const request = await fetch("/donnees/planning.json");
       const planning = await request.json();
       this.events = Object.values(planning.activites);
     },
 
-    displayDate (eventObj) {
+    displayDate(eventObj) {
       return new Date(eventObj.debut).toLocaleString();
     },
 
-    mapUrl (event) {
+    displayDuration(eventObj) {
+      const duration = td.parse(eventObj.duree);
+      let output = "";
+      if (duration.hours) {
+        output += duration.hours + " heures ";
+      }
+      if (duration.minutes) {
+        output += duration.minutes + " minutes";
+      }
+      return output;
+    },
+
+    mapUrl(event) {
       return {
         name: "map",
         params: {
           zone: event.zone,
-        }
-      }
-    }
+        },
+      };
+    },
   },
 
   computed: {
-    filteredEvents () {
+    filteredEvents() {
       const query = this.query.toLowerCase();
       if (query.length < 1) {
         return this.events;
       }
-      return this.events.filter(eventObj => {
+      return this.events.filter((eventObj) => {
         const findInName = eventObj.nom.toLowerCase().indexOf(query) !== -1;
-        const findInDesc = eventObj.description.toLowerCase().indexOf(query) !== -1;
-        const findInKeywords = eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
+        const findInDesc =
+          eventObj.description.toLowerCase().indexOf(query) !== -1;
+        const findInKeywords =
+          eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
 
         return findInName || findInDesc || findInKeywords;
-      })
+      });
     },
 
-    displayedEvents () {
+    displayedEvents() {
       return this.filteredEvents.sort((eventOne, eventTwo) => {
         const dateOne = new Date(eventOne.debut).getTime();
         const dateTwo = new Date(eventTwo.debut).getTime();
 
         return dateOne - dateTwo;
-      })
-    }
+      });
+    },
   },
 
-  created () {
+  created() {
     this.fetchPlanning();
   },
-}
+};
 </script>
