@@ -125,7 +125,7 @@ export default {
 
 :deep() .mapsvg path:hover {
   stroke: black;
-  stroke-width: 1px;
+  stroke-width: 2px;
   stroke-linecap: butt;
 
   fill: rgba(129, 236, 236, 0.3);
@@ -135,7 +135,7 @@ export default {
 
 :deep() .mapsvg path.selected {
   stroke: black;
-  stroke-width: 1px;
+  stroke-width: 2px;
 
   fill: rgba(0, 255, 55, 0.3);
 

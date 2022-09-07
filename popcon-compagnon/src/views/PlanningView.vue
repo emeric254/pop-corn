@@ -17,7 +17,7 @@
       >
         <option value="">Tous les jours</option>
         <option v-for="(date, i) in dates" :value="date" :key="i">
-          {{ date }}
+          {{ displayDay(date) }}
         </option>
       </select>
       <button
@@ -63,7 +63,7 @@
                 :to="mapUrl(event)"
                 class="text-popcon-orange underline hover:no-underline"
                 title="Cliquez pour voir où se déroule cet évènement."
-                >Voir sur la carte 📍</RouterLink
+                >Zone {{ event.zone }}</RouterLink
               >
             </td>
           </tr>
@@ -82,13 +82,13 @@ export default {
     RouterLink,
   },
 
-  data () {
+  data() {
     return {
       query: "",
       events: [],
       dates: [],
       selectedDate: "",
-    }
+    };
   },
 
   methods: {
@@ -100,7 +100,15 @@ export default {
     },
 
     displayDate(eventObj) {
-      return new Date(eventObj.debut).toLocaleString();
+      return new Date(eventObj.debut).toLocaleString(undefined, {
+        weekday: "long",
+        hour: "numeric",
+        minute: "numeric",
+      });
+    },
+
+    displayDay(date) {
+      return new Date(date).toLocaleString(undefined, { weekday: "long" });
     },
 
     displayDuration(eventObj) {
@@ -115,20 +123,20 @@ export default {
       return output;
     },
 
-    mapUrl (event) {
+    mapUrl(event) {
       return {
         name: "map",
         params: {
           zone: event.zone,
-        }
-      }
+        },
+      };
     },
 
     /**
      * Gets the dates from the object and parses it to DD/MM/YYYY format.
      * Makes an array of dates without duplicates.
      */
-    getDates () {
+    getDates() {
       const events = this.events;
       const dates = events.map((event) => {
         const eventDate = event.debut;
@@ -137,7 +145,7 @@ export default {
       });
       const uniqueDates = Array.from(new Set(dates));
       this.dates = uniqueDates;
-    }
+    },
   },
 
   computed: {
@@ -145,19 +153,26 @@ export default {
      * Returns all the events that match the query.
      * @returns {Array<Object>}
      */
-    filteredEvents () {
+    filteredEvents() {
       const query = this.query.toLowerCase();
 
-      return this.events.filter(eventObj => {
+      return this.events.filter((eventObj) => {
         const findInName = eventObj.nom.toLowerCase().indexOf(query) !== -1;
-        const findInDesc = eventObj.description.toLowerCase().indexOf(query) !== -1;
-        const findInKeywords = eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
-        const findDate = this.displayDate(eventObj).indexOf(this.selectedDate) !== -1;
+        const findInDesc =
+          eventObj.description.toLowerCase().indexOf(query) !== -1;
+        const findInKeywords =
+          eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
+        const findDate =
+          new Date(eventObj.debut)
+            .toLocaleDateString()
+            .indexOf(this.selectedDate) !== -1;
 
         if (query === "") {
+          console.log(this.selectedDate);
           return findDate;
         }
 
+        console.log(findInName, findInDesc, findInKeywords);
         return findInName || findInDesc || findInKeywords;
       });
     },
@@ -166,7 +181,7 @@ export default {
      * Returns the filtered events and sorts them by date.
      * @returns {Array<Object>}
      */
-    displayedEvents () {
+    displayedEvents() {
       return this.filteredEvents.sort((eventOne, eventTwo) => {
         const dateOne = new Date(eventOne.debut).getTime();
         const dateTwo = new Date(eventTwo.debut).getTime();
