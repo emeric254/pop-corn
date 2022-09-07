@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         "popup-mask": "rgba(0, 0, 0, 0.4)",
+        "popcon-blue": "rgb(86, 85, 159)",
+        "popcon-orange": "rgb(238, 129, 57)",
+        "popcon-green": "rgb(124, 181, 75)",
       },
     },
   },

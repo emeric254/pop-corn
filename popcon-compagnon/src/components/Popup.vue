@@ -4,16 +4,23 @@
       v-if="popupStore.isVisible"
       class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-popup-mask"
     >
-      <div class="p-4 rounded-xl bg-white shadow-lg relative">
-        <button
-          @click="hidePopup"
-          title="Fermer"
-          class="w-5 h-5 flex justify-center items-center border border-solid border-gray-900 rounded-full absolute top-3 right-3"
-        >
-          &times;
-        </button>
-        <h3>{{ popupStore.title }}</h3>
-        <p>{{ popupStore.body }}</p>
+      <div class="rounded-xl bg-white shadow-lg relative overflow-hidden">
+        <div class="bg-sky-50 flex items-center justify-between p-3">
+          <h3 class="text-popcon-blue font-bold pr-2">
+            {{ popupStore.title }}
+          </h3>
+          <button
+            @click="hidePopup"
+            title="Fermer"
+            class="w-5 h-5 pb-0.5 flex justify-center items-center border-2 border-solid border-popcon-orange rounded-full text-popcon-orange hover:text-popcon-green hover:border-popcon-green transition-colors duration-200"
+          >
+            &times;
+          </button>
+        </div>
+
+        <p v-if="popupStore.body" class="text-gray-700 p-3">
+          {{ popupStore.body }}
+        </p>
       </div>
     </div>
   </Transition>

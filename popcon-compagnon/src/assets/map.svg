@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg version="1.1" id="svg39" width="823.86383" height="621.42145" viewBox="0 0 823.86383 621.42145" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg version="1.1" id="svg39" width="823.86383" height="621.42145" viewBox="0 0 823.86383 621.42145" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
    <defs id="defs43" />
    <g id="layer1" style="display:inline">
       <path d="m 37.813572,211.54712 74.065288,3.05344 -11.83531,296.3905 -74.065284,-3.43672 z" id="team_jap" />
@@ -85,3 +85,4 @@
       <path d="m 294.18493,322.30536 19.43654,0.26989 -0.26989,19.43654 -19.30159,-0.26989 z" id="68" />
       <path d="m 294.18493,290.58547 19.3016,-0.13495 -0.13495,19.84138 -19.16721,0.13551 z" id="69" />
    </g>
+</svg>

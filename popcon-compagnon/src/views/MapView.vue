@@ -72,7 +72,7 @@ export default {
     },
 
     /**
-     *
+     * Opens the popup with the information from the parameters.
      * @param {String} oldZone The name of the zone that was previously selected.
      */
     openZonePopup(oldZone) {
@@ -116,16 +116,16 @@ export default {
   pointer-events: fill;
 }
 
-/deep/ .mapsvg path {
+:deep() .mapsvg path {
   cursor: pointer;
   fill: transparent;
   stroke: none;
   transition: fill 0.2s ease;
 }
 
-/deep/ .mapsvg path:hover {
+:deep() .mapsvg path:hover {
   stroke: black;
-  stroke-width: 1px;
+  stroke-width: 2px;
   stroke-linecap: butt;
 
   fill: rgba(129, 236, 236, 0.3);
@@ -133,9 +133,9 @@ export default {
   filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
 }
 
-/deep/ .mapsvg path.selected {
+:deep() .mapsvg path.selected {
   stroke: black;
-  stroke-width: 1px;
+  stroke-width: 2px;
 
   fill: rgba(0, 255, 55, 0.3);
 
