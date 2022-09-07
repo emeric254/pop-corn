@@ -7,4 +7,3 @@ import Popup from "@/components/Popup.vue";
   <RouterView />
   <Popup />
 </template>
-
