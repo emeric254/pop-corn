@@ -9,3 +9,9 @@ pyjwt  # used by an helper for JWT
 cryptography  # used by pyjwt
 
 python-multipart  # used by the fastapi.security.OAuth2PasswordBearer endpoint
+
+# used to import/export spreadsheet files
+pyexcel
+pyexcel-ods3  # for ods files
+pyexcel-xls  # for xls files
+pyexcel-xlsx  # for xlsx files
