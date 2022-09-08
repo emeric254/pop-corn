@@ -1,25 +1,27 @@
 <template>
   <div>
-    <div class="flex items-center justify-center px-3 pt-4">
-      <label for="input">Chercher:</label>
+    <div class="flex items-center justify-center px-3 pt-6">
+      <label class="font-semibold" for="input">Rechercher:</label>
       <input
         v-model="query"
         id="input"
         type="search"
         placeholder="Nom ou description…"
-        class="mx-2 px-3 py-1 border-2 border-solid border-popcon-blue rounded-lg outline-none text-popcon-blue focus:border-popcon-green"
+        class="font-semibold mx-2 px-3 py-1 border-2 border-solid border-popcon-blue rounded-lg outline-none text-popcon-blue focus:border-popcon-green"
       />
-      <label for="select">Choisir une date:</label>
+
+      <label class="font-semibold" for="select">Choisir une date:</label>
       <select
         id="select"
         v-model="selectedDate"
-        class="mx-2 px-2 py-1 border-2 border-solid border-popcon-blue rounded-lg outline-none text-popcon-blue focus:border-popcon-green"
+        class="font-semibold mx-2 px-2 py-1 border-2 border-solid border-popcon-blue rounded-lg outline-none text-popcon-blue focus:border-popcon-green"
       >
         <option value="">Tous les jours</option>
         <option v-for="(date, i) in dates" :value="date" :key="i">
           {{ displayDay(date) }}
         </option>
       </select>
+
       <button
         v-if="selectedDate || query"
         @click="selectedDate = query = ''"
@@ -33,11 +35,25 @@
       <table class="w-full">
         <thead>
           <tr class="bg-popcon-green text-white">
-            <th class="py-2">Nom</th>
-            <!-- <th class="py-2">Description</th> -->
-            <th class="py-2">Début</th>
-            <th class="py-2">Durée</th>
-            <th class="py-2">Zone</th>
+            <th class="font-semibold py-3 border-2 border-solid border-white">
+              Nom
+            </th>
+
+            <th
+              class="hidden font-semibold py-3 border-2 border-solid border-white xl:table-cell"
+            >
+              Description
+            </th>
+
+            <th class="font-semibold py-3 border-2 border-solid border-white">
+              Début
+            </th>
+            <th class="font-semibold py-3 border-2 border-solid border-white">
+              Durée
+            </th>
+            <th class="font-semibold py-3 border-2 border-solid border-white">
+              Zone
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -49,19 +65,23 @@
             <!-- TODO style for ended activities -->
             <!-- TODO style for current ongoing activities -->
             <!-- TODO add to calendar ? -->
-            <td class="p-2">
+            <td class="font-semibold p-1 md:p-2 lg:p-4 lg:pl-8">
               {{ event.nom }}
             </td>
-            <!-- <td class="p-2">
+
+            <td
+              class="hidden font-semibold p-1 md:p-2 lg:p-4 lg:pl-8 xl:table-cell"
+            >
               {{ event.description }}
-            </td> -->
-            <td class="p-2">
+            </td>
+
+            <td class="font-semibold p-1 md:p-2 lg:p-4">
               {{ displayDate(event) }}
             </td>
-            <td class="p-2">
+            <td class="font-semibold p-1 md:p-2 lg:p-4">
               {{ displayDuration(event) }}
             </td>
-            <td class="p-2">
+            <td class="font-semibold p-1 md:p-2 lg:p-4">
               <RouterLink
                 v-if="event.zone"
                 :to="mapUrl(event)"
