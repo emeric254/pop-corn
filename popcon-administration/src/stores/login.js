@@ -8,6 +8,8 @@ export const useLoginStore = defineStore({
   actions: {
     login() {
       this.loggedIn = true;
+
+      // TODO request popcon-organisation server to perform a proper login
     },
   },
 });

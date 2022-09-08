@@ -1,8 +1,9 @@
+<script setup>
+import LoadingSpinner from "../components/LoadingSpinner.vue";
+</script>
+
 <template>
-  <div>
-    <div class="flex justify-center pb-12">
-      <img src="@/assets/popcon.png" />
-    </div>
+  <div class="flex flex-col items-center">
     <form
       @submit.prevent="onSubmit"
       class="flex flex-col w-80 rounded-lg gap-2"
@@ -23,9 +24,10 @@
       />
       <button
         :disabled="loading"
-        class="p-2 rounded-lg bg-emerald-300 text-white font-bold uppercase cursor-pointer disabled:opacity-50 transition-opacity delay-300 hover:bg-emeral-100 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 transition-colors duration-200 hover:text-popcon-green hover:border-popcon-green active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300"
+        class="p-2 rounded-lg bg-emerald-300 text-white font-bold uppercase cursor-pointer disabled:cursor-not-allowed transition-opacity delay-300 hover:bg-emeral-100 active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300 transition-colors duration-200 hover:text-popcon-green hover:border-popcon-green active:bg-green-700 focus:outline-none focus:ring focus:ring-green-300"
         type="submit"
       >
+        <LoadingSpinner v-if="loading" />
         Connexion
       </button>
     </form>
@@ -50,13 +52,8 @@ export default {
   methods: {
     onSubmit() {
       this.loading = true;
-
-      // TODO request popcon-organisation server to perform a proper login
-
-      setTimeout(() => {
-        this.loginStore.login();
-        this.$router.push({ path: "/dashboard" });
-      }, 2000);
+      this.loginStore.login();
+      this.loading = false;
     },
   },
 };
