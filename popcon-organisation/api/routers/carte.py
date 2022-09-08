@@ -40,7 +40,7 @@ async def nouvelle_zone(*, _: Id = Depends(utilisateur_courant), zone: Zone):
 
 
 @routeur.put(
-    '/activities',
+    '/zones',
     responses={
         422: {'description': 'Carte invalide'}
     },
