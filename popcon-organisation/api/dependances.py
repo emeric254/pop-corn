@@ -27,21 +27,16 @@ async def utilisateur_courant(jeton: str = Depends(oauth2_scheme)) -> Id:
     :return: user id
     """
     try:
-        print('ok')
         payload: dict = jwt.verification(jeton=jeton)
-        print('ok')
-    except PyJWTError as e:
-        print(e)
+    except PyJWTError:
         raise EXCEPTION_IDENTIFIANTS
 
     user: str = (payload.get('sub') or '').replace('user:', '')
     if not user:
-        print('prout')
         raise EXCEPTION_IDENTIFIANTS
 
     try:
         user_id: Id = int(user)
-        print('caca')
     except ValueError:
         raise EXCEPTION_IDENTIFIANTS
 

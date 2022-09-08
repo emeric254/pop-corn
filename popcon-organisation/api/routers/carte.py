@@ -39,6 +39,16 @@ async def nouvelle_zone(*, _: Id = Depends(utilisateur_courant), zone: Zone):
     return carte.ajouter_zone(zone=zone)
 
 
+@routeur.put(
+    '/activities',
+    responses={
+        422: {'description': 'Carte invalide'}
+    },
+)
+async def ecraser_carte(*, _: Id = Depends(utilisateur_courant), nouvelle_carte: Carte):
+    carte.sauvegarde(nouvelle_carte)
+
+
 @routeur.get(
     '/zones/{id_zone}',
     response_model=Zone,

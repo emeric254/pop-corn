@@ -52,8 +52,9 @@ export default {
   methods: {
     onSubmit() {
       this.loading = true;
-      this.loginStore.login();
-      this.loading = false;
+      this.loginStore
+        .connexion(this.email, this.password)
+        .then(() => (this.loading = false));
     },
   },
 };

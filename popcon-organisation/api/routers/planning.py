@@ -29,7 +29,7 @@ async def obtenir_planning(*, _: Id = Depends(utilisateur_courant)):
 
 
 @routeur.post(
-    '/activities',
+    '/activites',
     response_model=Planning,
     responses={
         422: {'description': 'Activite invalide'}
@@ -37,6 +37,16 @@ async def obtenir_planning(*, _: Id = Depends(utilisateur_courant)):
 )
 async def nouvelle_activite(*, _: Id = Depends(utilisateur_courant), activite: Activite):
     return planning.ajouter_activite(activite=activite)
+
+
+@routeur.put(
+    '/activites',
+    responses={
+        422: {'description': 'Planning invalide'}
+    },
+)
+async def ecraser_planning(*, _: Id = Depends(utilisateur_courant), nouveau_planning: Planning):
+    planning.sauvegarde(nouveau_planning)
 
 
 @routeur.get(

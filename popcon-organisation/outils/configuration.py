@@ -20,7 +20,7 @@ class CORS(BaseModel):
     autoriser: bool = True
     origines: Json[list[AnyHttpUrl | Literal['*']]] = [
         'https://mobile.popcon.show',  # prod
-        'http://localhost:8080',  # popcon-compagnon en local
+        'http://localhost',  # popcon-compagnon en local
         'http://localhost:8088',  # popcon-organisation en local
     ]
     identifiants: bool = True
