@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import { useLoginStore } from '@/stores/login.js'
-import { mapStores } from 'pinia'
-import LoginForm from '../components/LoginForm.vue';
+import { useLoginStore } from "@/stores/login.js";
+import { mapStores } from "pinia";
+import LoginForm from "../components/LoginForm.vue";
 
 export default {
   components: {
@@ -18,8 +18,6 @@ export default {
     ...mapStores(useLoginStore),
   },
 
-  methods: {
-
-  }
-}
+  methods: {},
+};
 </script>

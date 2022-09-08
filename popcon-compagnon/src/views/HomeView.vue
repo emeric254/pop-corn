@@ -3,7 +3,9 @@
     class="container mx-auto flex flex-col content-around place-content-evenly h-screen w-full max-w-full"
   >
     <div class="flex justify-center">
-      <img src="@/assets/popcon.png" />
+      <a href="popcon.show">
+        <img src="@/assets/popcon.png" />
+      </a>
     </div>
     <div
       class="flex flex-col lg:flex-row items-center justify-evenly pt-4 gap-8"
