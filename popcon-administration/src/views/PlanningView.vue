@@ -4,9 +4,9 @@
   >
     <h1 class="text-center pt-4 text-xl">Edition du Planning</h1>
     <textarea
-      :disabled="chargement || !activites"
+      :disabled="chargement || !texte"
       :readonly="enregistrement"
-      v-model="activites"
+      v-model="texte"
       class="m-4 border rounded flex-grow disabled:cursor-not-allowed"
     ></textarea>
     <div class="flex content-around justify-around pb-2">
@@ -20,7 +20,7 @@
       </button>
       <button
         @click="sauvegarder"
-        :disabled="enregistrement || chargement || !activites"
+        :disabled="enregistrement || chargement || !texte"
         class="py-2 px-4 border rounded-lg bg-green-300 disabled:cursor-not-allowed"
       >
         <LoadingSpinner v-if="enregistrement" />
@@ -45,18 +45,11 @@ export default {
     return {
       chargement: false,
       enregistrement: false,
+      texte: "",
     };
   },
 
   computed: {
-    activites: {
-      get() {
-        return JSON.stringify(this.planningStore.planning.activites, null, 8);
-      },
-      set(valeur) {
-        this.planningStore.planning.activites = JSON.parse(valeur);
-      },
-    },
     ...mapStores(usePlanningStore),
     ...mapStores(useLoginStore),
   },
@@ -73,10 +66,18 @@ export default {
   methods: {
     recharger() {
       this.chargement = true;
-      this.planningStore.charger().then(() => (this.chargement = false));
+      this.planningStore.charger().then(() => {
+        this.texte = JSON.stringify(
+          this.planningStore.planning.activites,
+          null,
+          8
+        );
+        this.chargement = false;
+      });
     },
     sauvegarder() {
       this.enregistrement = true;
+      this.planningStore.planning.activites = JSON.parse(this.texte);
       this.planningStore
         .enregistrer()
         .then(() => (this.enregistrement = false));

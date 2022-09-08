@@ -4,9 +4,9 @@
   >
     <h1 class="text-center pt-4 text-xl">Edition de la Carte</h1>
     <textarea
-      :disabled="chargement || !zones"
+      :disabled="chargement || !texte"
       :readonly="enregistrement"
-      v-model="zones"
+      v-model="texte"
       class="m-4 border rounded flex-grow disabled:cursor-not-allowed"
     ></textarea>
     <div class="flex content-around justify-around pb-2">
@@ -20,7 +20,7 @@
       </button>
       <button
         @click="sauvegarder"
-        :disabled="enregistrement || chargement || !zones"
+        :disabled="enregistrement || chargement || !texte"
         class="py-2 px-4 border rounded-lg bg-green-300 disabled:cursor-not-allowed"
       >
         <LoadingSpinner v-if="enregistrement" />
@@ -45,18 +45,11 @@ export default {
     return {
       chargement: false,
       enregistrement: false,
+      texte: "",
     };
   },
 
   computed: {
-    zones: {
-      get() {
-        return JSON.stringify(this.carteStore.carte.zones, null, 8);
-      },
-      set(valeur) {
-        this.carteStore.carte.zones = JSON.parse(valeur);
-      },
-    },
     ...mapStores(useCarteStore),
     ...mapStores(useLoginStore),
   },
@@ -73,10 +66,14 @@ export default {
   methods: {
     recharger() {
       this.chargement = true;
-      this.carteStore.charger().then(() => (this.chargement = false));
+      this.carteStore.charger().then(() => {
+        this.texte = JSON.stringify(this.carteStore.carte.zones, null, 8);
+        this.chargement = false;
+      });
     },
     sauvegarder() {
       this.enregistrement = true;
+      this.carteStore.carte.zones = JSON.parse(this.texte);
       this.carteStore.enregistrer().then(() => (this.enregistrement = false));
     },
   },
