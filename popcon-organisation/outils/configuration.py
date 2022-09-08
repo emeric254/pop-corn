@@ -19,7 +19,7 @@ class Logs(BaseModel):
 class CORS(BaseModel):
     autoriser: bool = True
     origines: Json[list[AnyHttpUrl | Literal['*']]] = [
-        'https://mobile.popcon.com',  # prod
+        'https://mobile.popcon.show',  # prod
         'http://localhost:8080',  # popcon-compagnon en local
         'http://localhost:8088',  # popcon-organisation en local
     ]
@@ -49,7 +49,7 @@ class Configuration(BaseSettings):
     cors = CORS()
     jwt = JWT()
     identifiants = Identifiants()
-    domaines_autorises: list[str] = ['mobile.popcon.com', ]
+    domaines_autorises: list[str] = ['mobile.popcon.show', ]
 
     class Config:
         env_file = 'configuration.env'
