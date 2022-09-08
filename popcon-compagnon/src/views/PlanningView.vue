@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex items-center">
+    <div class="flex items-center justify-center px-3 pt-4">
       <label for="input">Chercher:</label>
       <input
         v-model="query"
@@ -34,7 +34,7 @@
         <thead>
           <tr class="bg-popcon-green text-white">
             <th class="py-2">Nom</th>
-            <th class="py-2">Description</th>
+            <!-- <th class="py-2">Description</th> -->
             <th class="py-2">Début</th>
             <th class="py-2">Durée</th>
             <th class="py-2">Zone</th>
@@ -46,12 +46,15 @@
             :key="i"
             class="even:bg-sky-100 odd:bg-white text-gray-700"
           >
+            <!-- TODO style for ended activities -->
+            <!-- TODO style for current ongoing activities -->
+            <!-- TODO add to calendar ? -->
             <td class="p-2">
               {{ event.nom }}
             </td>
-            <td class="p-2">
+            <!-- <td class="p-2">
               {{ event.description }}
-            </td>
+            </td> -->
             <td class="p-2">
               {{ displayDate(event) }}
             </td>
@@ -60,10 +63,11 @@
             </td>
             <td class="p-2">
               <RouterLink
+                v-if="event.zone"
                 :to="mapUrl(event)"
                 class="text-popcon-orange underline hover:no-underline"
                 title="Cliquez pour voir où se déroule cet évènement."
-                >Zone {{ event.zone }}</RouterLink
+                >{{ event.zone }}</RouterLink
               >
             </td>
           </tr>
@@ -87,7 +91,7 @@ export default {
       query: "",
       events: [],
       dates: [],
-      selectedDate: "",
+      selectedDate: new Date().toLocaleDateString(),
     };
   },
 
@@ -96,6 +100,14 @@ export default {
       const request = await fetch("/donnees/planning.json");
       const planning = await request.json();
       this.events = Object.values(planning.activites);
+
+      this.events.sort((eventOne, eventTwo) => {
+        const dateOne = new Date(eventOne.debut).getTime();
+        const dateTwo = new Date(eventTwo.debut).getTime();
+
+        return dateOne - dateTwo;
+      });
+
       this.getDates();
     },
 
@@ -112,7 +124,13 @@ export default {
     },
 
     displayDuration(eventObj) {
-      const duration = td.parse(eventObj.duree);
+      let duration = eventObj.duree;
+      try {
+        duration = td.parse(duration);
+      } catch {
+        console.error("duree invalide", eventObj);
+        return duration;
+      }
       let output = "";
       if (duration.hours) {
         output += duration.hours + " heures ";
@@ -127,7 +145,7 @@ export default {
       return {
         name: "map",
         params: {
-          zone: event.zone,
+          zone: event.zone.toLowerCase().replace(" ", "_"),
         },
       };
     },
@@ -145,6 +163,10 @@ export default {
       });
       const uniqueDates = Array.from(new Set(dates));
       this.dates = uniqueDates;
+
+      if (this.dates.indexOf(this.selectedDate) < 0) {
+        this.selectedDate = "";
+      }
     },
   },
 
@@ -168,11 +190,9 @@ export default {
             .indexOf(this.selectedDate) !== -1;
 
         if (query === "") {
-          console.log(this.selectedDate);
           return findDate;
         }
 
-        console.log(findInName, findInDesc, findInKeywords);
         return findInName || findInDesc || findInKeywords;
       });
     },
@@ -182,12 +202,7 @@ export default {
      * @returns {Array<Object>}
      */
     displayedEvents() {
-      return this.filteredEvents.sort((eventOne, eventTwo) => {
-        const dateOne = new Date(eventOne.debut).getTime();
-        const dateTwo = new Date(eventTwo.debut).getTime();
-
-        return dateOne - dateTwo;
-      });
+      return this.filteredEvents;
     },
   },
 

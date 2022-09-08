@@ -87,13 +87,13 @@ export default {
       }
 
       if (zoneName) {
-        const zoneData = this.mapData[zoneName];
+        const zonePath = this.getZonePath(zoneName);
+        if (zonePath) {
+          zonePath.classList.add("selected");
+        }
 
+        const zoneData = this.mapData[zoneName];
         if (zoneData) {
-          const zonePath = this.getZonePath(zoneName);
-          if (zonePath) {
-            zonePath.classList.add("selected");
-          }
           this.popupStore.show(zoneData.nom, zoneData.description);
         }
       }
@@ -117,28 +117,28 @@ export default {
 }
 
 :deep() .mapsvg path {
-  cursor: pointer;
   fill: transparent;
   stroke: none;
   transition: fill 0.2s ease;
+
+  @apply cursor-pointer;
 }
 
 :deep() .mapsvg path:hover {
-  stroke: black;
-  stroke-width: 2px;
   stroke-linecap: butt;
 
   fill: rgba(129, 236, 236, 0.3);
 
-  filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.5));
+
+  @apply stroke-2 stroke-black;
 }
 
 :deep() .mapsvg path.selected {
-  stroke: black;
-  stroke-width: 2px;
+  fill: rgba(60, 255, 128, 0.6);
 
-  fill: rgba(0, 255, 55, 0.3);
+  filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.5) blur(1px));
 
-  filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.4));
+  @apply animate-pulse stroke-2 stroke-cyan-900;
 }
 </style>

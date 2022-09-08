@@ -5,7 +5,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "CONFERENCE - SAMEDI-1": {
@@ -13,15 +13,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:00:00",
-      "duree": 15.0,
-      "zone": "CONFERENCE"
+      "duree": "PT15M",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "FONTAINE - SAMEDI-2": {
       "nom": "FONTAINE",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "FONTAINE"
     },
     "PHOTOCALL - SAMEDI-3": {
@@ -29,7 +29,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "PHOTOCALL"
     },
     "COMEDIENS - SAMEDI-4": {
@@ -37,7 +37,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "COMEDIENS"
     },
     "DEDICACES - SAMEDI-5": {
@@ -45,7 +45,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "DEDICACES"
     },
     "SCENE - DIMANCHE": {
@@ -53,7 +53,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "CONFERENCE - DIMANCHE-1": {
@@ -61,15 +61,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
-      "zone": "CONFERENCE"
+      "duree": "PT15M",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "MARCUS - DIMANCHE-2": {
       "nom": "MARCUS",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "MARCUS"
     },
     "GABION - DIMANCHE-3": {
@@ -77,7 +77,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "GABION"
     },
     "PHOTOCALL - DIMANCHE-4": {
@@ -85,7 +85,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "PHOTOCALL"
     },
     "COMEDIENS - DIMANCHE-5": {
@@ -93,7 +93,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "COMEDIENS"
     },
     "DEDICACES - DIMANCHE-6": {
@@ -101,7 +101,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "DEDICACES"
     },
     "JUST DANCE - SAMEDI": {
@@ -109,7 +109,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:30:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "DEDICACES - SAMEDI-2": {
@@ -117,7 +117,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:30:00",
-      "duree": 165.0,
+      "duree": "PT2H45M",
       "zone": "FONTAINE"
     },
     "PIX - SAMEDI-3": {
@@ -125,7 +125,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:30:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "PHOTOCALL"
     },
     "DEDICACES - SAMEDI-4": {
@@ -133,7 +133,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:30:00",
-      "duree": 180.0,
+      "duree": "PT3H",
       "zone": "COMEDIENS"
     },
     "BASTIEN BOURLE -  & GREGORY LAISNE - SAMEDI-5": {
@@ -141,7 +141,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:30:00",
-      "duree": 180.0,
+      "duree": "PT3H",
       "zone": "DEDICACES"
     },
     "RWBY Ice Queendom  - : l\u2019anime \u201cWHAT IF\u201d  - de RWBY - SAMEDI-1": {
@@ -149,15 +149,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T10:45:00",
-      "duree": 45.0,
-      "zone": "CONFERENCE"
+      "duree": "PT45M",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "MIX VINH - DIMANCHE": {
       "nom": "MIX VINH",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "CONFERENCE - JEUX DE PLATEAU - DIMANCHE-1": {
@@ -165,15 +165,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 45.0,
-      "zone": "CONFERENCE"
+      "duree": "PT45M",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "PHOTOCALL - DIMANCHE-2": {
       "nom": "PHOTOCALL",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 75.0,
+      "duree": "PT1H15M",
       "zone": "MARCUS"
     },
     "DEDICACES - DIMANCHE-3": {
@@ -181,7 +181,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 90.0,
+      "duree": "PT1H30M",
       "zone": "GABION"
     },
     "MARCUS - DIMANCHE-4": {
@@ -189,7 +189,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 75.0,
+      "duree": "PT1H15M",
       "zone": "PHOTOCALL"
     },
     "DEDICACES - DIMANCHE-5": {
@@ -197,7 +197,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 150.0,
+      "duree": "PT2H30M",
       "zone": "COMEDIENS"
     },
     "BASTIEN BOURLE - & - GREGORY LAISNE - DIMANCHE-6": {
@@ -205,7 +205,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T10:45:00",
-      "duree": 150.0,
+      "duree": "PT2H30M",
       "zone": "DEDICACES"
     },
     "K-POP : HOPE ETERNITY - SAMEDI": {
@@ -213,7 +213,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T11:30:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "K-POP : REDSHIFT - SAMEDI": {
@@ -221,7 +221,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T11:45:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "COMEDIENS - ANIMES - SAMEDI-1": {
@@ -229,15 +229,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T11:45:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "PHOTOCALL - SAMEDI-2": {
       "nom": "PHOTOCALL",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T11:45:00",
-      "duree": 120.0,
+      "duree": "PT2H",
       "zone": "FONTAINE"
     },
     "FONTAINE - SAMEDI-3": {
@@ -245,7 +245,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T11:45:00",
-      "duree": 120.0,
+      "duree": "PT2H",
       "zone": "PHOTOCALL"
     },
     "CONFERENCE - SAMEDI-4": {
@@ -253,7 +253,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T11:45:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "COMEDIENS"
     },
     "YOJERAI FIGHT SABER - DIMANCHE": {
@@ -261,7 +261,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T11:45:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "COMEDIENS - ANIMES - DIMANCHE-1": {
@@ -269,15 +269,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T11:45:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "DEDICACES - DIMANCHE-2": {
       "nom": "DEDICACES",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T11:45:00",
-      "duree": 120.0,
+      "duree": "PT2H",
       "zone": "MARCUS"
     },
     "CONFERENCE - DIMANCHE-5": {
@@ -285,7 +285,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T11:45:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "COMEDIENS"
     },
     "K-POP : COSMIX CREW - SAMEDI": {
@@ -293,7 +293,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T12:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "PHOTOCALL - DIMANCHE-3": {
@@ -301,7 +301,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T12:00:00",
-      "duree": 120.0,
+      "duree": "PT2H",
       "zone": "GABION"
     },
     "GABION - DIMANCHE-4": {
@@ -309,7 +309,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T12:00:00",
-      "duree": 120.0,
+      "duree": "PT2H",
       "zone": "PHOTOCALL"
     },
     "BE WILD - DIMANCHE": {
@@ -317,7 +317,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T12:15:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "BLIND TEST anim\u00e9 par BE WILD - SAMEDI": {
@@ -325,7 +325,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T12:30:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "REPAS - SAMEDI-2": {
@@ -333,7 +333,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T13:00:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "FONTAINE"
     },
     "REPAS - SAMEDI-4": {
@@ -341,7 +341,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T13:00:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "COMEDIENS"
     },
     "LES NOUVELLES - CONSOLES RETRO - DIMANCHE-1": {
@@ -349,15 +349,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T13:00:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "REPAS - DIMANCHE-2": {
       "nom": "REPAS",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T13:00:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "MARCUS"
     },
     "REPAS - DIMANCHE-5": {
@@ -365,7 +365,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T13:00:00",
-      "duree": 90.0,
+      "duree": "PT1H30M",
       "zone": "COMEDIENS"
     },
     "CONCOURS - RETRO - SAMEDI-1": {
@@ -373,15 +373,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T13:15:00",
-      "duree": 45.0,
-      "zone": "CONFERENCE"
+      "duree": "PT45M",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "BLIND TEST - HOPE ETERNITY - DIMANCHE": {
       "nom": "BLIND TEST - HOPE ETERNITY",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T13:15:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "REPAS - DIMANCHE-3": {
@@ -389,7 +389,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T13:15:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "GABION"
     },
     "NEKO LIGHT - ORCHESTRA - SAMEDI": {
@@ -397,7 +397,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T14:15:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "KAAMELOTT - SAMEDI-1": {
@@ -405,15 +405,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T14:15:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE - SAMEDI-2": {
       "nom": "CONFERENCE",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T14:15:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "FONTAINE"
     },
     "COMEDIENS - SAMEDI-3": {
@@ -421,7 +421,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T14:15:00",
-      "duree": 105.0,
+      "duree": "PT1H45M",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL - SAMEDI-4": {
@@ -429,7 +429,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T14:15:00",
-      "duree": 105.0,
+      "duree": "PT1H45M",
       "zone": "COMEDIENS"
     },
     "COSPLAY - DIMANCHE": {
@@ -437,7 +437,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T14:15:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "KAAMELOTT - DIMANCHE-1": {
@@ -445,15 +445,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T14:15:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE - DIMANCHE-3": {
       "nom": "CONFERENCE",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T14:15:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "GABION"
     },
     "COMEDIENS - DIMANCHE-4": {
@@ -461,7 +461,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T14:45:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL - DIMANCHE-5": {
@@ -469,7 +469,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T14:45:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "COMEDIENS"
     },
     "YOJERAI FIGHT SABER - SAMEDI": {
@@ -477,7 +477,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T15:30:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "YVES LIGNON - SAMEDI-1": {
@@ -485,15 +485,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T15:30:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "JURY - COSPLAY - SAMEDI-3": {
       "nom": "JURY - COSPLAY",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T15:30:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "PHOTOCALL"
     },
     "COSMIX CREW - DIMANCHE": {
@@ -501,7 +501,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T15:30:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "YVES LIGNON - DIMANCHE-1": {
@@ -509,15 +509,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T15:30:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "SCENE - DIMANCHE-2": {
       "nom": "SCENE",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T15:30:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "MARCUS"
     },
     "SKIN -  COMPANY - DIMANCHE": {
@@ -525,7 +525,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T15:45:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "MIX VINH - SAMEDI": {
@@ -533,7 +533,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T16:00:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "K-POP : REDSHIFT - DIMANCHE": {
@@ -541,7 +541,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T16:15:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "TAT - SAMEDI-1": {
@@ -549,15 +549,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T16:45:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "MARCUS - DIMANCHE": {
       "nom": "MARCUS",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T16:45:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "TAT - DIMANCHE-1": {
@@ -565,15 +565,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T16:45:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "JURY - COSPLAY - DIMANCHE-4": {
       "nom": "JURY - COSPLAY",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T16:45:00",
-      "duree": 60.0,
+      "duree": "PT1H",
       "zone": "PHOTOCALL"
     },
     "COSMIX CREW - SAMEDI": {
@@ -581,7 +581,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T17:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "SKIN -  COMPANY - SAMEDI": {
@@ -589,7 +589,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T17:30:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "BE WILD - SAMEDI": {
@@ -597,7 +597,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T18:00:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "CONFERENCES - JEUX DE PLATEAU - SAMEDI-1": {
@@ -605,15 +605,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T18:00:00",
-      "duree": 60.0,
-      "zone": "CONFERENCE"
+      "duree": "PT1H",
+      "zone": "SALLE_DE_CONFERENCE"
     },
     "JULIEN - FOURNET (TAT) - SAMEDI-5": {
       "nom": "JULIEN - FOURNET (TAT)",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T18:00:00",
-      "duree": 45.0,
+      "duree": "PT45M",
       "zone": "DEDICACES"
     },
     "HOPE ETERNITY - DIMANCHE": {
@@ -621,7 +621,7 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T18:00:00",
-      "duree": 15.0,
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "FERMETURE DU SALON - DIMANCHE": {
@@ -629,63 +629,15 @@
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "SCENE"
-    },
-    "FERMETURE DU SALON - DIMANCHE-1": {
-      "nom": "FERMETURE DU SALON",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "CONFERENCE"
-    },
-    "FERMETURE DU SALON - DIMANCHE-2": {
-      "nom": "FERMETURE DU SALON",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "MARCUS"
-    },
-    "FERMETURE DU SALON - DIMANCHE-3": {
-      "nom": "FERMETURE DU SALON",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "GABION"
-    },
-    "FERMETURE DU SALON - DIMANCHE-4": {
-      "nom": "FERMETURE DU SALON",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "PHOTOCALL"
-    },
-    "FERMETURE DU SALON - DIMANCHE-5": {
-      "nom": "FERMETURE DU SALON",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "COMEDIENS"
-    },
-    "FERMETURE DU SALON - DIMANCHE-6": {
-      "nom": "FERMETURE DU SALON",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T18:15:00",
-      "duree": 15.0,
-      "zone": "DEDICACES"
+      "duree": "PT15M",
+      "zone": ""
     },
     "COUCOUCIRCUS - SAMEDI": {
       "nom": "COUCOUCIRCUS",
       "description": "",
       "mots_clef": [],
       "debut": "2022-09-10T18:45:00",
-      "duree": 30.0,
+      "duree": "PT30M",
       "zone": "SCENE"
     }
   }
