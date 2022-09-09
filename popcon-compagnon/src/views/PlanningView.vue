@@ -111,7 +111,7 @@ export default {
       query: "",
       events: [],
       dates: [],
-      selectedDate: new Date().toLocaleDateString(),
+      selectedDate: new Date().toDateString(),
     };
   },
 
@@ -179,7 +179,7 @@ export default {
       const dates = events.map((event) => {
         const eventDate = event.debut;
         const parsedDate = new Date(eventDate);
-        return parsedDate.toLocaleDateString();
+        return parsedDate.toDateString();
       });
       const uniqueDates = Array.from(new Set(dates));
       this.dates = uniqueDates;
@@ -206,7 +206,7 @@ export default {
           eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
         const findDate =
           new Date(eventObj.debut)
-            .toLocaleDateString()
+            .toDateString()
             .indexOf(this.selectedDate) !== -1;
 
         if (query === "") {
