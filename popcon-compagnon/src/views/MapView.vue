@@ -132,20 +132,24 @@ export default {
 }
 
 :deep() .mapsvg path:hover {
-  stroke-linecap: butt;
+  stroke: black;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  stroke-dashoffset: 2px;
 
-  fill: rgba(129, 236, 236, 0.3);
-
-  filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.5));
-
-  @apply stroke-2 stroke-black;
+  filter: drop-shadow(0px 0px 8px black);
 }
 
 :deep() .mapsvg path.selected {
-  fill: rgba(60, 255, 128, 0.6);
+  stroke: red;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  stroke-dashoffset: 2px;
 
-  filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.5) blur(1px));
+  fill: rgba(0, 255, 0, 0.8);
 
-  @apply animate-pulse stroke-2 stroke-cyan-900;
+  filter: drop-shadow(0px 0px 16px black);
+
+  @apply animate-pulse;
 }
 </style>
