@@ -95,7 +95,7 @@ export default {
           zonePath.scrollIntoView({
             behavior: "smooth",
             block: "center",
-            inline: "nearest",
+            inline: "center",
           });
         }
 
