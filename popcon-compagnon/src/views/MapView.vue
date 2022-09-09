@@ -90,6 +90,13 @@ export default {
         const zonePath = this.getZonePath(zoneName);
         if (zonePath) {
           zonePath.classList.add("selected");
+
+          // mettre l'element au milieu de l'ecran
+          zonePath.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
         }
 
         const zoneData = this.mapData[zoneName];
