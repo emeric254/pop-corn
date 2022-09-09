@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="flex items-center justify-center px-3 pt-6">
-      <label class="font-semibold" for="input">Rechercher:</label>
+    <div class="flex flex-wrap items-center justify-center px-3 pt-6">
+      <label class="font-semibold" for="input">Recherche:</label>
       <input
         v-model="query"
         id="input"
@@ -10,7 +10,7 @@
         class="font-semibold mx-2 px-3 py-1 border-2 border-solid border-popcon-blue rounded-lg outline-none text-popcon-blue focus:border-popcon-green"
       />
 
-      <label class="font-semibold" for="select">Choisir une date:</label>
+      <label class="font-semibold" for="select"> Jour:</label>
       <select
         id="select"
         v-model="selectedDate"
