@@ -11,12 +11,7 @@
       }"
       class="absolute flex justify-center items-center bg-popup-mask"
     >
-      <div
-        :class="[
-          scale > 2.0 ? 'grow' : 'grow-0',
-          'rounded-xl bg-white sm:shadow-lg overflow-hidden md:grow-0',
-        ]"
-      >
+      <div class="rounded-xl bg-white sm:shadow-lg overflow-hidden md:grow-0">
         <div
           :class="[
             scale > 2.0 ? 'px-2 pt-2 pb-1' : 'p-4',
