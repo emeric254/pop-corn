@@ -20,7 +20,7 @@
       "nom": "REDSHIFT",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T11:15:00",
+      "debut": "2022-09-10T11:30:00",
       "duree": "PT15M",
       "zone": "SCENE"
     },
@@ -28,7 +28,7 @@
       "nom": "COSMIX CREW",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T11:15:00",
+      "debut": "2022-09-10T11:45:00",
       "duree": "PT15M",
       "zone": "SCENE"
     },
@@ -124,7 +124,7 @@
       "nom": "CONCOURS - RETRO GAMING",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T11:30:00",
+      "debut": "2022-09-10T13:00:00",
       "duree": "PT45M",
       "zone": "SALLE_DE_CONFERENCE"
     },
@@ -180,7 +180,7 @@
       "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T14:00:00",
+      "debut": "2022-09-10T15:15:00",
       "duree": "PT1H",
       "zone": "50"
     },
