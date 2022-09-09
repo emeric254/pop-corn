@@ -2,7 +2,14 @@
   <Transition name="fade">
     <div
       v-if="popupStore.isVisible"
-      class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-popup-mask"
+      @click.self="hidePopup"
+      :style="{
+        top: top + 'px',
+        left: left + 'px',
+        width: width + 'px',
+        height: height + 'px',
+      }"
+      class="absolute flex justify-center items-center bg-popup-mask"
     >
       <div class="rounded-xl bg-white shadow-lg relative overflow-hidden">
         <div class="bg-sky-50 flex items-center justify-between p-3">
@@ -31,6 +38,17 @@ import { mapStores } from "pinia";
 import { usePopupStore } from "@/stores/popup";
 
 export default {
+  data() {
+    return {
+      timeout: 5,
+      debounce: null,
+      top: 0,
+      left: 0,
+      width: 0,
+      height: 0,
+    };
+  },
+
   computed: {
     ...mapStores(usePopupStore),
   },
@@ -46,14 +64,44 @@ export default {
         this.hidePopup();
       }
     },
+
+    changePosition() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API
+      console.log(visualViewport);
+
+      this.top = visualViewport.pageTop;
+      this.left = visualViewport.pageLeft;
+      this.width = visualViewport.width;
+      this.height = visualViewport.height;
+    },
+
+    positionEvent() {
+      clearTimeout(this.debounce);
+      this.debounce = setTimeout(this.changePosition, this.timeout);
+    },
   },
 
   mounted() {
+    // esc
     window.addEventListener("keydown", this.listenEscKey);
+
+    // viewport
+    window.addEventListener("scroll", this.positionEvent);
+    visualViewport.addEventListener("resize", this.positionEvent);
+    visualViewport.addEventListener("scroll", this.positionEvent);
+
+    // initialise la position
+    this.changePosition();
   },
 
   unmounted() {
+    // esc
     window.removeEventListener("keydown", this.listenEscKey);
+
+    // viewport
+    window.removeEventListener("scroll", this.positionEvent);
+    visualViewport.removeEventListener("resize", this.positionEvent);
+    visualViewport.addEventListener("scroll", this.positionEvent);
   },
 };
 </script>
