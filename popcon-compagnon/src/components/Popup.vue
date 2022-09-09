@@ -70,7 +70,6 @@ export default {
   methods: {
     hidePopup() {
       this.popupStore.hide();
-      this.$router.replace("/map");
     },
 
     listenEscKey(event) {
