@@ -164,7 +164,7 @@ export default {
     mapUrl(event) {
       return {
         name: "map",
-        params: {
+        query: {
           zone: event.zone.toLowerCase().replace(" ", "_"),
         },
       };
@@ -205,9 +205,8 @@ export default {
         const findInKeywords =
           eventObj.mots_clef.join("").toLowerCase().indexOf(query) !== -1;
         const findDate =
-          new Date(eventObj.debut)
-            .toDateString()
-            .indexOf(this.selectedDate) !== -1;
+          new Date(eventObj.debut).toDateString().indexOf(this.selectedDate) !==
+          -1;
 
         if (query === "") {
           return findDate;

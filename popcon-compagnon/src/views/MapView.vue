@@ -38,7 +38,7 @@ export default {
   },
 
   watch: {
-    "$route.params.zone": {
+    "$route.query.zone": {
       handler(_, oldZone) {
         this.openZonePopup(oldZone);
       },
@@ -53,7 +53,7 @@ export default {
       if (zoneName !== null) {
         this.$router.push({
           name: "map",
-          params: {
+          query: {
             zone: zoneName,
           },
         });
@@ -72,11 +72,11 @@ export default {
     },
 
     /**
-     * Opens the popup with the information from the parameters.
+     * Opens the popup with the information from the query parameters.
      * @param {String} oldZone The name of the zone that was previously selected.
      */
     openZonePopup(oldZone) {
-      const zoneName = this.$route.params.zone;
+      const zoneName = this.$route.query.zone;
 
       // Zone previously selected, unselect it.
       if (oldZone) {
