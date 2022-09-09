@@ -11,11 +11,9 @@ COPY package.json package-lock.json  ./
 RUN npm config set fund false
 RUN npm install
 
-COPY vite.config.js index.html  ./
+COPY vite.config.js index.html tailwind.config.js postcss.config.js ./
 COPY public  ./public/
 COPY src  ./src/
-
-RUN rm ./public/donnees
 
 RUN npm run build
 
