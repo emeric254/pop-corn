@@ -12,22 +12,28 @@
       class="absolute flex justify-center items-center bg-popup-mask"
     >
       <div
-        class="rounded-xl bg-white sm:shadow-lg overflow-hidden grow md:grow-0"
+        :class="[
+          scale > 2.0 ? 'grow' : 'grow-0',
+          'rounded-xl bg-white sm:shadow-lg overflow-hidden md:grow-0',
+        ]"
       >
         <div
-          class="bg-sky-50 flex items-center justify-between px-3 py-2 md:p-4"
+          :class="[
+            scale > 2.0 ? 'px-2 pt-2 pb-1' : 'p-4',
+            'bg-sky-50 flex items-center justify-between',
+          ]"
         >
           <h3
-            :style="{ 'font-size': 24 * scale + 'px' }"
-            class="text-popcon-blue font-bold pr-1 md:pr-3"
+            :style="{ 'font-size': 24 / scale + 'px' }"
+            class="text-popcon-blue font-bold pr-1 sm:pr-2 md:pr-3"
           >
             {{ popupStore.title }}
           </h3>
           <button
-            :style="{ 'font-size': 32 * scale + 'px' }"
+            :style="{ 'font-size': 32 / scale + 'px' }"
             @click="hidePopup"
             title="Fermer"
-            class="w-2 h-1 sm:w-3 sm:h-2 md:w-5 md:h-5 md:pb-0.5 flex justify-center items-center rounded-full text-popcon-orange hover:text-popcon-green hover:border-popcon-green transition-colors duration-200"
+            class="w-2 h-1 sm:w-3 sm:h-2 md:w-5 md:h-5 md:pb-0.5 flex justify-center items-center text-popcon-orange hover:text-popcon-green hover:border-popcon-green transition-colors duration-200"
           >
             &times;
           </button>
@@ -35,8 +41,8 @@
 
         <p
           v-if="popupStore.body"
-          :style="{ 'font-size': 24 * scale + 'px' }"
-          class="text-gray-700 px-2 py-1 md:p-3"
+          :style="{ 'font-size': 24 / scale + 'px' }"
+          :class="[scale > 3.0 ? 'px-2 py-1' : 'p-4', 'text-gray-700']"
         >
           {{ popupStore.body }}
         </p>
@@ -87,7 +93,7 @@ export default {
       this.height = visualViewport.height;
 
       // resize texte
-      this.scale = 1 / visualViewport.scale;
+      this.scale = visualViewport.scale;
     },
 
     positionEvent() {
