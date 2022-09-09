@@ -61,7 +61,7 @@ openssl pkey -in jwt.key -pubout -out jwt.key.pub
 This server will read and write files from a folder.
 Those files are also read by the `popcon-compagnon` project.
 
-Both symlinks `popcon-compagnon/public/donnees/` and `popcon-administration/public/donnees/` reference this folder.
+Symlink `popcon-compagnon/public/donnees/` reference this folder.
 
 
 ## Start the server
