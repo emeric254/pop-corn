@@ -51,7 +51,7 @@ export default {
       const zoneName = zone.getAttribute("id");
 
       if (zoneName !== null) {
-        this.$router.push({
+        this.$router.replace({
           name: "map",
           query: {
             zone: zoneName,
