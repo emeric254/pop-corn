@@ -66,7 +66,7 @@ export default {
 
     changePosition() {
       // https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API
-      console.log(visualViewport);
+      console.debug(visualViewport);
 
       this.top = visualViewport.pageTop;
       this.left = visualViewport.pageLeft;
