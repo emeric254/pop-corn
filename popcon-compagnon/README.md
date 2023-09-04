@@ -38,10 +38,20 @@ npm run lint
 
 ```sh
 npm run podman
+
+# ~ or if you only got docker :
+# npm run docker
 ```
 
-you can now start a container using a command like this.
+Now you can start a container :
+
+```sh
+podman run --rm -p 8080:8080 localhost/popcon-compagnom:latest
+# you can replace podman by docker if needed
+```
+
 Modify the port (left part) as you wish.
+
 Replace the `./public/donnees/` path to the folder you want to mount inside the container.
 
 ```sh
