@@ -1,477 +1,417 @@
 {
   "activites": {
     "SCENE 1 - SAMEDI": {
-      "nom": "JUST DANCE",
+      "nom": "JUST DANCE LIVE !",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T10:15:00",
-      "duree": "PT45M",
+      "debut": "2023-09-09T10:00:00",
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 2 - SAMEDI": {
-      "nom": "HOPE ETERNITY",
+      "nom": "K-POP : SKIN COMPANY",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T11:15:00",
-      "duree": "PT15M",
+      "debut": "2023-09-09T11:15:00",
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "SCENE 3 - SAMEDI": {
-      "nom": "REDSHIFT",
+      "nom": "K-POP : COSMIX CREW",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T11:15:00",
+      "debut": "2023-09-09T11:45:00",
       "duree": "PT15M",
       "zone": "SCENE"
     },
     "SCENE 4 - SAMEDI": {
-      "nom": "COSMIX CREW",
+      "nom": "WHAT KENDAMA",
       "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T11:15:00",
-      "duree": "PT15M",
+      "mots_clef": [],
+      "debut": "2023-09-09T12:15:00",
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 5 - SAMEDI": {
-      "nom": "BLIND TEST - BE WILD",
+      "nom": "K-POP CONTEST",
       "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T12:15:00",
-      "duree": "PT45M",
+      "mots_clef": ["K-POP"],
+      "debut": "2023-09-09T13:30:00",
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 6 - SAMEDI": {
-      "nom": "NEKO LIGHT - ORCHESTRA",
+      "nom": "CONCERT : ASTERO-H",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T14:00:00",
+      "debut": "2023-09-09T15:00:00",
       "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 7 - SAMEDI": {
-      "nom": "YOJERAI FIGHT SABER",
+      "nom": "K-POP : WAVIN CREW",
       "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T15:15:00",
+      "mots_clef": ["K-POP"],
+      "debut": "2023-09-09T16:15:00",
       "duree": "PT15M",
       "zone": "SCENE"
     },
     "SCENE 8 - SAMEDI": {
-      "nom": "KYOBU - \"DJ SET POPCON\"",
+      "nom": "K-POP : REDSHIFT",
       "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T15:45:00",
-      "duree": "PT45M",
+      "mots_clef": ["K-POP"],
+      "debut": "2023-09-09T16:30:00",
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "SCENE 9 - SAMEDI": {
-      "nom": "COSMIX CREW",
+      "nom": "TOURNOI JEUX VIDEO",
       "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T16:45:00",
-      "duree": "PT15M",
+      "mots_clef": [],
+      "debut": "2023-09-09T17:00:00",
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 10 - SAMEDI": {
-      "nom": "REDSHIFT",
-      "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T17:00:00",
-      "duree": "PT15M",
-      "zone": "SCENE"
-    },
-    "SCENE 11 - SAMEDI": {
-      "nom": "SKIN - COMPANY",
-      "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T17:15:00",
-      "duree": "PT30M",
-      "zone": "SCENE"
-    },
-    "SCENE 12 - SAMEDI": {
-      "nom": "BE WILD",
-      "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T17:45:00",
-      "duree": "PT30M",
-      "zone": "SCENE"
-    },
-    "SCENE 13 - SAMEDI": {
-      "nom": "COUCOUCIRCUS",
-      "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-10T18:30:00",
-      "duree": "PT30M",
-      "zone": "SCENE"
-    },
-    "CONFERENCE 1 - SAMEDI": {
-      "nom": "CONFERENCE - RWBY ICE QUEENDOM: L'ANIME \"WHAT IF\" DE RWBY",
+      "nom": "SHOWCASE : MIX KYOBU",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T10:30:00",
+      "debut": "2023-09-09T18:15:00",
       "duree": "PT45M",
+      "zone": "SCENE"
+    },
+
+    "CONFERENCE 1 - SAMEDI": {
+      "nom": "KARAOKE",
+      "description": "",
+      "mots_clef": [],
+      "debut": "2023-09-09T10:15:00",
+      "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 2 - SAMEDI": {
-      "nom": "RENCONTRE AVEC LES COMEDIENS - BASTIEN BOURLE & GREGORY LAISNE",
+      "nom": "TOURNOI STREET FIGHTER 2",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T11:30:00",
+      "debut": "2023-09-09T11:30:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 3 - SAMEDI": {
-      "nom": "CONCOURS - RETRO GAMING",
+      "nom": "RENCONTRE INFLUENCEURS : KARAL, NEWTITEUF, GUSS DX",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T11:30:00",
-      "duree": "PT45M",
+      "debut": "2023-09-09T13:00:00",
+      "duree": "PT30M",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 4 - SAMEDI": {
-      "nom": "KAAMELOTT: RENCONTRE AVEC BRUNO FONTAINE",
+      "nom": "RENCONTRE COMEDIENS : BENOIT ALLEMANE, BRIGITTE LECORDIER, MAIK DARAH, KELYAN BLANC",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T14:00:00",
+      "debut": "2023-09-09T14:00:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 5 - SAMEDI": {
-      "nom": "CONFERENCE - YVES LIGNON - HISTOIRE DE MAISONS HANTEES (ANGLETERRE ET QUELQUES AUTRES)",
+      "nom": "TABLE RONDE COMICS : L'INTELLIGENCE ARTIFICIELLE, AMIE OU ENNEMIE ?",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T15:15:00",
+      "debut": "2023-09-09T15:15:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 6 - SAMEDI": {
-      "nom": "CONFERENCE - TAT - (WORK IN PROGRESS) PATTIE ET LA COLERE DE POSEIDON",
+      "nom": "THEATRE : QUI A TUE TAKEHIRO ? AVEC BENOIT ALLEMANE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T16:30:00",
+      "debut": "2023-09-09T16:45:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 7 - SAMEDI": {
-      "nom": "CONFERENCE - JEUX DE PLATEAU",
+      "nom": "GUSS DX : DECOUVRIR LE PARCOURS DE VIDEASTE SPECIALISTE DE LA CHASSE AUX FANTOMES ET DU PARANORMAL",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T17:45:00",
+      "debut": "2023-09-09T18:00:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
-    "DEDICACE 1 - SAMEDI": {
-      "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T10:15:00",
-      "duree": "PT1H",
-      "zone": "50"
-    },
-    "DEDICACE 2 - SAMEDI": {
-      "nom": "DEDICACES - LUCAS BRASIER",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T14:00:00",
-      "duree": "PT1H",
-      "zone": "50"
-    },
-    "DEDICACE 3 - SAMEDI": {
-      "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T14:00:00",
-      "duree": "PT1H",
-      "zone": "50"
-    },
-    "DEDICACE 4 - SAMEDI": {
-      "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-10T16:30:00",
-      "duree": "PT1H",
-      "zone": "50"
-    },
+
     "PHOTOCALL 1 - SAMEDI": {
-      "nom": "PHOTOCALL - BRUNO FONTAINE",
+      "nom": "PHOTOCALL - VISITEURS",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T11:30:00",
-      "duree": "PT1H",
+      "debut": "2023-09-09T10:00:00",
+      "duree": "PT45M",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL 2 - SAMEDI": {
-      "nom": "PHOTOCALL - BASTIEN BOURLE & GREGORY LAISNE",
+      "nom": "PHOTOCALL - COMEDIENS",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T14:00:00",
-      "duree": "PT1H",
+      "debut": "2023-09-09T11:00:00",
+      "duree": "PT45M",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL 3 - SAMEDI": {
-      "nom": "PHOTOCALL - BASTIEN BOURLE & GREGORY LAISNE",
+      "nom": "PHOTOCALL - PIX",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T16:30:00",
-      "duree": "PT1H",
+      "debut": "2023-09-09T13:15:00",
+      "duree": "PT45M",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL 4 - SAMEDI": {
-      "nom": "PHOTOCALL - BASTIEN BOURLE & GREGORY LAISNE",
+      "nom": "PHOTOCALL - VISITEURS",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T17:45:00",
+      "debut": "2023-09-09T14:15:00",
       "duree": "PT45M",
       "zone": "PHOTOCALL"
     },
-    "KAAMELOTT 1 - SAMEDI": {
-      "nom": "DEDICACES - BRUNO FONTAINE",
+    "PHOTOCALL 5 - SAMEDI": {
+      "nom": "PHOTOCALL - GUSS DX",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T10:15:00",
-      "duree": "PT1H",
-      "zone": "64"
+      "debut": "2023-09-09T15:15:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
     },
-    "KAAMELOTT 2 - SAMEDI": {
-      "nom": "DEDICACES - BRUNO FONTAINE",
+    "PHOTOCALL 6 - SAMEDI": {
+      "nom": "PHOTOCALL - NEWTITEUF",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T15:15:00",
-      "duree": "PT1H",
-      "zone": "64"
+      "debut": "2023-09-09T16:00:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
     },
-    "KAAMELOTT 3 - SAMEDI": {
-      "nom": "DEDICACES - BRUNO FONTAINE",
+    "PHOTOCALL 7 - SAMEDI": {
+      "nom": "PHOTOCALL - JURY COSPLAY",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T17:45:00",
+      "debut": "2023-09-09T16:45:00",
       "duree": "PT45M",
-      "zone": "64"
+      "zone": "PHOTOCALL"
     },
-    "FERMETURE - SAMEDI": {
-      "nom": "FERMETURE",
+    "PHOTOCALL 8 - SAMEDI": {
+      "nom": "PHOTOCALL - KARAL",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-10T19:00:00",
-      "duree": "PT10M",
-      "zone": ""
+      "debut": "2023-09-09T17:45:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
+    },
+    "PHOTOCALL 9 - SAMEDI": {
+      "nom": "PHOTOCALL - COMEDIENS",
+      "description": "",
+      "mots_clef": [],
+      "debut": "2023-09-09T18:30:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
     },
 
     "SCENE 1 - DIMANCHE": {
-      "nom": "ABISTO ET KYOBU - \"SECRET WORLD\"",
+      "nom": "JUST DANCE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T10:30:00",
-      "duree": "PT45M",
+      "debut": "2023-09-10T10:00:00",
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "SCENE 2 - DIMANCHE": {
-      "nom": "YOJERAI FIGHT SABER",
+      "nom": "K-POP : COSMIX CREW",
       "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T11:30:00",
+      "mots_clef": ["K-POP"],
+      "debut": "2023-09-10T10:45:00",
       "duree": "PT15M",
       "zone": "SCENE"
     },
     "SCENE 3 - DIMANCHE": {
-      "nom": "BE WILD",
+      "nom": "K-POP : WAVIN CREW",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-11T12:00:00",
-      "duree": "PT45M",
+      "debut": "2023-09-10T11:15:00",
+      "duree": "PT15M",
       "zone": "SCENE"
     },
     "SCENE 4 - DIMANCHE": {
-      "nom": "BLIND TEST - HOPE ETERNITY",
+      "nom": "K-POP : SKIN COMPANY",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-11T13:00:00",
-      "duree": "PT45M",
+      "debut": "2023-09-10T11:45:00",
+      "duree": "PT30M",
       "zone": "SCENE"
     },
     "SCENE 5 - DIMANCHE": {
-      "nom": "CONCOURS - COSPLAY",
+      "nom": "K-POP : REDSHIFT",
       "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T14:00:00",
+      "mots_clef": ["K-POP"],
+      "debut": "2023-09-10T14:00:00",
       "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 6 - DIMANCHE": {
-      "nom": "COSMIX CREW",
+      "nom": "TOURNOI JEUX VIDEO",
       "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-11T15:15:00",
-      "duree": "PT15M",
+      "mots_clef": [],
+      "debut": "2023-09-10T13:00:00",
+      "duree": "PT45M",
       "zone": "SCENE"
     },
     "SCENE 7 - DIMANCHE": {
-      "nom": "SKIN -  COMPANY",
+      "nom": "CONCOURS COSPLAY",
       "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-11T15:30:00",
-      "duree": "PT30M",
+      "mots_clef": [],
+      "debut": "2023-09-10T14:00:00",
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 8 - DIMANCHE": {
-      "nom": "REDSHIFT",
+      "nom": "K-POP CONTEST",
       "description": "",
       "mots_clef": ["K-POP"],
-      "debut": "2022-09-11T16:00:00",
-      "duree": "PT15M",
+      "debut": "2023-09-10T15:15:00",
+      "duree": "PT1H",
       "zone": "SCENE"
     },
     "SCENE 9 - DIMANCHE": {
-      "nom": "MARCUS VS. POPCON",
+      "nom": "REMISE DES PRIX - CONCOURS COSPLAY",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T16:30:00",
-      "duree": "PT1H",
-      "zone": "SCENE"
-    },
-    "SCENE 10 - DIMANCHE": {
-      "nom": "HOPE ETERNITY",
-      "description": "",
-      "mots_clef": ["K-POP"],
-      "debut": "2022-09-11T17:45:00",
+      "debut": "2023-09-10T16:30:00",
       "duree": "PT15M",
       "zone": "SCENE"
     },
-    "CONFERENCE 1 - DIMANCHE": {
-      "nom": "CONFERENCE - JEUX DE PLATEAU",
+    "SCENE 10 - DIMANCHE": {
+      "nom": "FRANK ANIME LIVE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T10:30:00",
-      "duree": "PT45M",
+      "debut": "2023-09-10T17:00:00",
+      "duree": "PT1H",
+      "zone": "SCENE"
+    },
+
+    "CONFERENCE 1 - DIMANCHE": {
+      "nom": "KARAOKE",
+      "description": "",
+      "mots_clef": [],
+      "debut": "2023-09-10T09:45:00",
+      "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 2 - DIMANCHE": {
-      "nom": "RENCONTRE AVEC LES COMEDIENS - BASTIEN BOURLE & GREGORY LAISNE",
+      "nom": "CONFERENCE COMICS : LES SUPERS VILAINS PAR XAVIER FOURNIER ET FREDERIC RALIERE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T11:30:00",
-      "duree": "PT1H",
+      "debut": "2023-09-10T11:00:00",
+      "duree": "PT1H15M",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 3 - DIMANCHE": {
-      "nom": "CONFERENCE - LES NOUVELLES CONSOLES RETRO",
+      "nom": "[DEV] DEVENEZ VOTRE PROPRE PERSO DE MANGA GRACE A L'IA PAR LE WAGON",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T12:45:00",
-      "duree": "PT1H",
+      "debut": "2023-09-10T12:30:00",
+      "duree": "PT45M",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 4 - DIMANCHE": {
-      "nom": "KAAMELOTT: RENCONTRE AVEC NICOLAS GABION",
+      "nom": "THEATRE : QUI A TUE TAKEHIRO ? AVEC BENOIT ALLEMANE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T14:00:00",
+      "debut": "2023-09-10T13:45:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 5 - DIMANCHE": {
-      "nom": "CONFERENCE - YVES LIGNON - HISTOIRE DES MAISONS HANTEES DE FRANCE",
+      "nom": "RENCONTRE COMEDIENS : BENOIT ALLEMANE, BRIGITTE LECORDIER, MAIK DARAH, KELYAN BLANC",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T15:15:00",
+      "debut": "2023-09-10T15:00:00",
       "duree": "PT1H",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 6 - DIMANCHE": {
-      "nom": "CONFERENCE - TAT - RENCONTRE AVEC JULIEN FOURNET, REALISATEUR DE PIL",
+      "nom": "RENCONTRE INFLUENCEURS : KARAL, GUSS DX",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T16:30:00",
-      "duree": "PT1H",
+      "debut": "2023-09-10T16:15:00",
+      "duree": "PT45M",
       "zone": "SALLE_DE_CONFERENCE"
     },
     "CONFERENCE 7 - DIMANCHE": {
-      "nom": "DEDICACES - JULIEN FOURNET",
+      "nom": "JEU DE SOCIETE COLLECTIF : PAPER DUNGEON PAR LA CHANCE QUI TOURNE",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T17:30:00",
-      "duree": "PT15M",
+      "debut": "2023-09-10T17:15:00",
+      "duree": "PT45M",
       "zone": "SALLE_DE_CONFERENCE"
     },
-    "DEDICACES 1 - DIMANCHE": {
-      "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T10:30:00",
-      "duree": "PT45M",
-      "zone": "50"
-    },
-    "DEDICACES 2 - DIMANCHE": {
-      "nom": "DEDICACES - LUCAS BRASIER",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T14:00:00",
-      "duree": "PT1H",
-      "zone": "50"
-    },
-    "DEDICACES 3 - DIMANCHE": {
-      "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T15:15:00",
-      "duree": "PT1H",
-      "zone": "50"
-    },
-    "DEDICACES 4 - DIMANCHE": {
-      "nom": "DEDICACES - BASTIEN BOURLE & GREGORY LAISNE",
-      "description": "",
-      "mots_clef": [],
-      "debut": "2022-09-11T16:30:00",
-      "duree": "PT45M",
-      "zone": "50"
-    },
+
     "PHOTOCALL 1 - DIMANCHE": {
-      "nom": "PHOTOCALL - NICOLAS GABION",
+      "nom": "PHOTOCALL - VISITEURS",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T11:45:00",
+      "debut": "2023-09-10T09:45:00",
       "duree": "PT1H",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL 2 - DIMANCHE": {
-      "nom": "PHOTOCAL - BASTIEN BOURLES & GREGORY LAISNE",
+      "nom": "PHOTOCALL - COMEDIENS",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T14:30:00",
-      "duree": "PT30M",
+      "debut": "2023-09-10T11:00:00",
+      "duree": "PT45M",
       "zone": "PHOTOCALL"
     },
     "PHOTOCALL 3 - DIMANCHE": {
-      "nom": "PHOTOCALL - NICOLAS GABION",
+      "nom": "PHOTOCALL - NEWTITEUF",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T15:15:00",
-      "duree": "PT1H",
+      "debut": "2023-09-10T13:15:00",
+      "duree": "PT45M",
       "zone": "PHOTOCALL"
     },
-    "KAAMELOTT 1 - DIMANCHE": {
-      "nom": "DEDICACES - NICOLAS GABION",
+    "PHOTOCALL 4 - DIMANCHE": {
+      "nom": "PHOTOCALL - COMEDIENS",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T10:30:00",
-      "duree": "PT1H",
-      "zone": "64"
+      "debut": "2023-09-10T14:15:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
     },
-    "KAAMELOTT 2 - DIMANCHE": {
-      "nom": "DEDICACES - NICOLAS GABION",
+    "PHOTOCALL 5 - DIMANCHE": {
+      "nom": "PHOTOCALL - GUSS DX",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T15:15:00",
-      "duree": "PT1H",
-      "zone": "64"
+      "debut": "2023-09-10T15:00:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
     },
-    "FERMETURE - DIMANCHE": {
-      "nom": "FERMETURE",
+    "PHOTOCALL 6 - DIMANCHE": {
+      "nom": "PHOTOCALL - KARAL",
       "description": "",
       "mots_clef": [],
-      "debut": "2022-09-11T18:00:00",
-      "duree": "PT10M",
-      "zone": ""
+      "debut": "2023-09-10T15:30:00",
+      "duree": "PT30M",
+      "zone": "PHOTOCALL"
+    },
+    "PHOTOCALL 7 - DIMANCHE": {
+      "nom": "PHOTOCALL - PIX",
+      "description": "",
+      "mots_clef": [],
+      "debut": "2023-09-10T16:15:00",
+      "duree": "PT45M",
+      "zone": "PHOTOCALL"
+    },
+    "PHOTOCALL 8 - DIMANCHE": {
+      "nom": "PHOTOCALL - VISITEURS",
+      "description": "",
+      "mots_clef": [],
+      "debut": "2023-09-10T17:15:00",
+      "duree": "PT45M",
+      "zone": "PHOTOCALL"
     }
   }
 }
