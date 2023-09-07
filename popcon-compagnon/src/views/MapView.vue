@@ -1,7 +1,11 @@
 <template>
   <div class="flex justify-center">
     <div class="relative">
-      <img src="@/assets/map.jpg" />
+      <picture>
+        <source srcset="/plan/fond.webp" type="image/webp" />
+        <source srcset="/plan/fond.avif" type="image/avif" />
+        <img src="/plan/fond.jpg" alt="fond de carte" />
+      </picture>
       <div
         v-if="isLoading"
         class="flex justify-center items-center absolute top-0 left-0 w-full h-full"
